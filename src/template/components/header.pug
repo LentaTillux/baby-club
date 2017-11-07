@@ -1,0 +1,42 @@
+//begin header
++b.HEADER.header
+	+e.container.container
+		+b.logo.header__logo
+			+e.A.link(href='#!')
+				+e.IMG.img(src='static/img/logo.svg' alt='Бэби клуб')
+			+e.P.descr Бережное развитие интеллекта
+
+		+e.info
+			+e.contacts
+				+e.contacts-block._city
+					+i('loc')
+					+e.SPAN.contacts-text г. Москва
+					+e.A(href='#!') Сменить город
+
+				+e.contacts-block
+					+e.SPAN.contacts-text на проспекте Мира
+					+e.A(href='#!') Сменить клуб
+
+				+e.A.contacts-tel(href='tel:88001002024') 8 800
+					= ' '
+					+e.SPAN 100 20 24
+
+				+e.BUTTON.contacts-btn.btn._green._sm(type='button') Обратный звонок
+
+			+b.NAV.nav._header.js-nav
+				+e.UL.list.container
+					-
+						navList = [
+						'О клубе',
+						'Программы занятий',
+						'Гарантии',
+						'Отзывы',
+						'Контакты'
+						]
+					for navLink, index in navList
+						-activeIndex = 1
+						li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink
+
+		//button.hamburger.header__hamburger.hamburger--spring.js-hamburger(type='button')
+		//	span.hamburger-box
+		//		span.hamburger-inner

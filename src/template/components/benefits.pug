@@ -1,0 +1,39 @@
+if benefits ? benefits : benefits = []
+
+//begin benefits
++b.SECTION.benefits(class= benefits.classMod ? benefits.classMod : '')
+	+e.container.container
+		-
+			benefitsList = [{
+			icon: 'angel',
+			text: 'Возрастные группы от 8 месяцев до 7 лет'
+			}, {
+			icon: 'squirrel',
+			text: 'Бережно развиваем интеллект'
+			}, {
+			icon: 'worm',
+			text: 'Максимум 8 детей в каждой группе'
+			}, {
+			icon: 'reptile',
+			text: 'Готовимся к взрослой жизни, садику или школе'
+			}, {
+			icon: 'dynamite',
+			text: 'Обучаемся, играем и отдыхаем вместе'
+			}, {
+			icon: 'tree',
+			text: 'Развиваем навыки общения и дружбы'
+			}, {
+			icon: 'giraffe',
+			text: 'Познаём окружающий мир и себя'
+			}, {
+			icon: 'lock',
+			text: 'Ходим в кружки и секции, развиваем таланты'
+			}]
+
+		mixin benefitsItem(item)
+			+e.item
+				+e.item-icon(class= `icon-${item.icon}`)
+				+e.P= item.text
+
+		each item in benefitsList
+			+benefitsItem(item)

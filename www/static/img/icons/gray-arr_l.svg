@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="51"
+     viewBox="0 0 58 58">
+    <defs>
+        <path id="i8axa"
+              d="M120 1669a25 25 0 1 1 50-.01 25 25 0 0 1-50 0c0-13.8 0 0 0 0zm14.06 2.83l11.63 11.63a4.02 4.02 0 1 0 5.7-5.69l-8.8-8.79 8.8-8.78a4.03 4.03 0 0 0-5.7-5.7l-11.63 11.64a4.02 4.02 0 0 0 0 5.7c1.58 1.56 0 0 0 0z"/>
+        <path id="i8axb"
+              d="M117 1697v-57h57v57zm3-28a25 25 0 1 0 50 0 25 25 0 0 0-50 0s0-13.82 0 0zm14.06 2.83s1.58 1.57 0 0a4.02 4.02 0 0 1 0-5.7l11.63-11.62a4.03 4.03 0 0 1 5.7 5.7l-8.8 8.77 8.8 8.8a4.03 4.03 0 0 1-5.7 5.68z"/>
+        <mask id="i8axd" width="2" height="2" x="-1" y="-1">
+            <path fill="#fff" d="M120 1643h51v51h-51z"/>
+            <use xlink:href="#i8axa"/>
+        </mask>
+        <filter id="i8axc" width="83.5" height="85.3" x="110" y="1633" filterUnits="userSpaceOnUse">
+            <feOffset dx="2.5" dy="4.3" in="SourceGraphic" result="FeOffset1055Out"/>
+            <feGaussianBlur in="FeOffset1055Out" result="FeGaussianBlur1056Out" stdDeviation="2 2"/>
+        </filter>
+        <clipPath id="i8axe">
+            <use fill="#fff" xlink:href="#i8axb"/>
+        </clipPath>
+    </defs>
+    <g>
+        <g opacity=".35" transform="translate(-115 -1639)">
+            <g filter="url(#i8axc)">
+                <use fill="none" stroke-opacity=".2" stroke-width="0" mask="url(&quot;#i8axd&quot;)"
+                     xlink:href="#i8axa"/>
+                <use fill-opacity=".2" xlink:href="#i8axa"/>
+            </g>
+            <use fill="#2e3056" xlink:href="#i8axa"/>
+            <use fill="#fff" fill-opacity="0" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                 stroke-miterlimit="50" stroke-width="6" clip-path="url(&quot;#i8axe&quot;)" xlink:href="#i8axa"/>
+        </g>
+    </g>
+</svg>

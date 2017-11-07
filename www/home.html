@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бэби клуб</title>
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+  </head>
+  <body>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M633.3 57.94a.98.98 0 0 1-.1.35l-5.14 9.36a.62.62 0 0 1-1.12 0l-5.15-9.38a.74.74 0 0 1-.08-.33 7.1 7.1 0 0 1-.71-3.1c0-3.77 2.91-6.84 6.5-6.84s6.5 3.07 6.5 6.85a7.1 7.1 0 0 1-.7 3.09zm-8.08-3.47c0 1.33 1.02 2.4 2.28 2.4a2.35 2.35 0 0 0 2.28-2.4c0-1.33-1.02-2.4-2.28-2.4a2.35 2.35 0 0 0-2.28 2.4z"
+          />
+        </defs>
+        <symbol id="icon-arr_right" viewBox="0 0 80 64.5">
+          <path d="M4 36.2h62.4L45 57.7c-1.6 1.6-1.6 4.1 0 5.7 1.6 1.6 4.1 1.6 5.7 0L78.9 35c.2-.2.4-.4.5-.6.1-.1.1-.2.1-.3.1-.1.1-.3.2-.4 0-.1.1-.3.1-.4 0-.1.1-.2.1-.4.1-.2.1-.5.1-.8 0-.3-.1-.5-.1-.8 0-.1-.1-.2-.1-.4s-.1-.2-.1-.4c0-.1-.1-.3-.2-.4-.1-.1-.1-.2-.1-.3l-.6-.6-28.2-28c-1.6-1.6-4.1-1.6-5.7 0s-1.6 4.1 0 5.7l21.4 21.4H4c-2.3 0-4 1.8-4 4s1.8 4 4 3.9z"
+          />
+        </symbol>
+        <symbol id="icon-loc" viewBox="0 0 16 24">
+          <use xlink:href="#a" transform="translate(-619 -46)" />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!--begin header-->
+    <header class="header">
+      <div class="header__container container">
+        <div class="logo header__logo">
+          <a class="logo__link" href="#!">
+            <img class="logo__img" src="static/img/logo.svg" alt="Бэби клуб" title="" />
+          </a>
+          <p class="logo__descr">Бережное развитие интеллекта</p>
+        </div>
+        <div class="header__info">
+          <div class="header__contacts">
+            <div class="header__contacts-block header__contacts-block_city">
+              <svg class="icon icon-loc">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loc"></use>
+              </svg>
+              <span class="header__contacts-text">г. Москва</span>
+              <a href="#!">Сменить город</a>
+            </div>
+            <div class="header__contacts-block">
+              <span class="header__contacts-text">на проспекте Мира</span>
+              <a href="#!">Сменить клуб</a>
+            </div>
+            <a class="header__contacts-tel" href="tel:88001002024">8 800
+              <span>100 20 24</span>
+            </a>
+            <button class="header__contacts-btn btn btn_green btn_sm" type="button">Обратный звонок</button>
+          </div>
+          <nav class="nav nav_header js-nav">
+            <ul class="nav__list container">
+              <li class="is-active">
+                <a href="#!">О клубе</a>
+              </li>
+              <li>
+                <a href="#!">Программы занятий</a>
+              </li>
+              <li>
+                <a href="#!">Гарантии</a>
+              </li>
+              <li>
+                <a href="#!">Отзывы</a>
+              </li>
+              <li>
+                <a href="#!">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--button.hamburger.header__hamburger.hamburger--spring.js-hamburger(type='button')-->
+        <!--	span.hamburger-box-->
+        <!--		span.hamburger-inner-->
+      </div>
+    </header>
+    <main class="content"></main>
+    <!--begin hero-->
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__inner">
+          <h3 class="hero__title">Эффективно развиваем вашего ребенка ежедневно</h3>
+          <p class="hero__sub-title">Пробное занятие бесплатно! Запишитесь прямо сейчас</p>
+          <form class="hero__form" action="#!" method="POST">
+            <div class="hero__form-field">
+              <input class="hero__form-input input" type="text" placeholder="Представтесь пожалуйста" name="" required="required" />
+            </div>
+            <div class="hero__form-field">
+              <input class="hero__form-input input" type="text" placeholder="Номер вашего телефона" name="" required="required" />
+            </div>
+            <input class="hero__form-submit btn btn_green" type="submit" value="Записаться на занятие" />
+          </form>
+        </div>
+      </div>
+      <div class="hero__bg" style="background-image: url(static/img/bg/hero_bg.jpg);"></div>
+    </section>
+    <!--begin benefits-->
+    <section class="benefits">
+      <div class="benefits__container container">
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-angel"></div>
+          <p>Возрастные группы от 8 месяцев до 7 лет</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-squirrel"></div>
+          <p>Бережно развиваем интеллект</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-worm"></div>
+          <p>Максимум 8 детей в каждой группе</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-reptile"></div>
+          <p>Готовимся к взрослой жизни, садику или школе</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-dynamite"></div>
+          <p>Обучаемся, играем и отдыхаем вместе</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-tree"></div>
+          <p>Развиваем навыки общения и дружбы</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-giraffe"></div>
+          <p>Познаём окружающий мир и себя</p>
+        </div>
+        <div class="benefits__item">
+          <div class="benefits__item-icon icon-lock"></div>
+          <p>Ходим в кружки и секции, развиваем таланты</p>
+        </div>
+      </div>
+    </section>
+    <!--begin teachers-->
+    <section class="teachers">
+      <div class="teachers__container container">
+        <h2 class="teachers__title title">ВЫ МОЖЕТЕ ДОВЕРИТЬ НАМ СВОИХ ДЕТЕЙ</h2>
+        <div class="teachers__slider js-default-slider">
+          <div class="teachers__person">
+            <div class="teachers__person-look">
+              <img src="static/img/content/smirnova.png" alt="Смирнова Александра Андреевна" title="" />
+              <div class="teachers__person-speech">
+                <p>Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.</p>
+              </div>
+            </div>
+            <div class="teachers__person-text">
+              <h5 class="teachers__person-name">Смирнова Александра Андреевна</h5>
+              <p class="teachers__person-pos">Педагог младших групп, психолог</p>
+              <p class="teachers__person-edu">Московский государственный педагогический университет</p>
+              <p>
+                <strong>Специализация:</strong> педагог-психолог</p>
+              <p>
+                <strong>Работает в "Бебиклуб"</strong> с 2015 года</p>
+              <p>
+                <strong>Лучший учитель года</strong> в 2016 году</p>
+              <button class="teachers__ask-btn btn btn_green" type="button">Задать вопрос педагогу</button>
+            </div>
+          </div>
+          <div class="teachers__person">
+            <div class="teachers__person-look">
+              <img src="static/img/content/smirnova.png" alt="Смирнова Александра Андреевна" title="" />
+              <div class="teachers__person-speech">
+                <p>Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.</p>
+              </div>
+            </div>
+            <div class="teachers__person-text">
+              <h5 class="teachers__person-name">Смирнова Александра Андреевна</h5>
+              <p class="teachers__person-pos">Педагог младших групп, психолог</p>
+              <p class="teachers__person-edu">Московский государственный педагогический университет</p>
+              <p>
+                <strong>Специализация:</strong> педагог-психолог</p>
+              <p>
+                <strong>Работает в "Бебиклуб"</strong> с 2015 года</p>
+              <p>
+                <strong>Лучший учитель года</strong> в 2016 году</p>
+              <button class="teachers__ask-btn btn btn_green" type="button">Задать вопрос педагогу</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="teachers__bg" style="background-image: url(static/img/bg/teachers_bg.jpg);"></div>
+    </section>
+    <!-- Scripts-->
+    <!--if contactMap !== falsescript(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type='text/javascript')-->
+    <script src="static/js/index.jquery.js"></script>
+    <script src="static/js/index.js"></script>
+  </body>
+</html>

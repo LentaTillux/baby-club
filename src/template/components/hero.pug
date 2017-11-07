@@ -1,0 +1,18 @@
+if hero ? hero : hero = []
+if hero.title ? hero.title : hero.title = 'Эффективно развиваем вашего ребенка ежедневно'
+if hero.subTitle ? hero.subTitle : hero.subTitle = 'Пробное занятие бесплатно! Запишитесь прямо сейчас'
+
+//begin hero
++b.SECTION.hero(class= hero.classMod ? hero.classMod : '')
+	+e.container.container
+		+e.inner
+			+e.H3.title= hero.title
+			+e.P.sub-title= hero.subTitle
+			+e.FORM.form(action='#!' method='POST')
+				+e.form-field
+					+e.INPUT.form-input.input(type='text' placeholder='Представтесь пожалуйста' name='' required)
+				+e.form-field
+					+e.INPUT.form-input.input(type='text' placeholder='Номер вашего телефона' name='' required)
+				+e.INPUT.form-submit.btn._green(type='submit' value='Записаться на занятие')
+
+	+e.bg(style='background-image: url(static/img/bg/hero_bg.jpg)')

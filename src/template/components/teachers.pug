@@ -1,0 +1,35 @@
+if teachers ? teachers : teachers = []
+if teachers.title ? teachers.title : teachers.title = 'ВЫ МОЖЕТЕ ДОВЕРИТЬ НАМ СВОИХ ДЕТЕЙ'
+
+//begin teachers
++b.SECTION.teachers(class= teachers.classMod ? teachers.classMod : '')
+	+e.container.container
+		+e.H2.title.title= teachers.title
+		+e.slider.js-default-slider
+			-i = 0
+			while i < 2
+				+e.person
+					+e.person-look
+						+e.IMG(src='static/img/content/smirnova.png' alt='Смирнова Александра Андреевна')
+						+e.person-speech
+							+e.P Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.
+					+e.person-text
+						+e.H5.person-name Смирнова Александра Андреевна
+						+e.P.person-pos Педагог младших групп, психолог
+						+e.P.person-edu Московский государственный педагогический университет
+						+e.P
+							+e.STRONG Специализация:
+							= ' '
+							| педагог-психолог
+						+e.P
+							+e.STRONG Работает в "Бебиклуб"
+							= ' '
+							| с 2015 года
+						+e.P
+							+e.STRONG Лучший учитель года
+							= ' '
+							| в 2016 году
+
+						+e.BUTTON.ask-btn.btn._green(type='button') Задать вопрос педагогу
+				-i++
+	+e.bg(style='background-image: url(static/img/bg/teachers_bg.jpg)')
