@@ -18,7 +18,7 @@
         </clipPath>
     </defs>
     <g>
-        <g opacity=".35" transform="translate(-1456 -1640)">
+        <g transform="translate(-1456 -1640)">
             <g filter="url(#w07bc)">
                 <use fill="none" stroke-opacity=".2" stroke-width="0" mask="url(&quot;#w07bd&quot;)"
                      xlink:href="#w07ba"/>

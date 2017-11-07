@@ -1,4 +1,4 @@
-.teachers
+.employees
 	position: relative
 	padding: 50px 0
 	&__container
@@ -17,14 +17,19 @@
 			margin-top: -25px
 			overflow: hidden
 			border-radius: 50%
+			opacity: .35
+			+trs
+			.no-touch &:hover
+				opacity: .8
 			&_prev
 				left: 0
 			&_next
 				right: 0
 	&__person
 		font-size: 0
-		cursor: grab
+		cursor: default
 		&-look
+			position: relative
 			display: inline-block
 			vertical-align: middle
 			width: percentage(665 / 1170)
@@ -32,14 +37,20 @@
 			img
 				display: inline-block
 				vertical-align: bottom
+				position: relative
+				z-index: 2
 		&-speech
 			position: absolute
+			top: 20%
+			left: 20%
+			z-index: 1
 			max-width: 270px
 			padding: 28px 30px 22px 30px
 			box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2)
 			border-radius: 28px
 			border: 3px solid $white
 			background-color: #cdecff
+			text-align: left
 			font-size: 17px
 		&-text
 			display: inline-block

@@ -14836,7 +14836,7 @@ function initSliders() {
     dotsClass: 'slider-dots'
   };
 
-  var $successSld = $('.js-default-slider');
+  var $successSld = $('.js-employees-slider');
   $successSld.slick($.extend({}, defaultOptions));
 }
 

@@ -1,0 +1,61 @@
+if lesson ? lesson : lesson = []
+if lesson.title ? lesson.title : lesson.title = 'ЧЕМУ НАУЧИТСЯ ВАШ МАЛЫШ'
+
+//begin lesson
++b.SECTION.lesson(class= lesson.classMod ? lesson.classMod : '')
+	+e.container.container
+		+e.benefits
+			-
+				benefitsList = [{
+				iconClass: 'green',
+				text: 'Многоступенчатый отбор лучших педагогов и воспитателей'
+				}, {
+				iconClass: 'yellow',
+				text: 'Внутреннее обучение персонала и ежегодная аттестация'
+				}, {
+				iconClass: 'pink',
+				text: 'Уникальная методика раннего развития интеллекта'
+				}, {
+				iconClass: 'blue',
+				text: 'Соответствие актуальным профстандартам педагогики'
+				}]
+
+			mixin benefitsItem(benItem)
+				+e.benefits-item
+					+e.benefits-icon(class= `_${benItem.iconClass}`)
+					+e.benefits-text
+						+e.P= benItem.text
+			each benItem in benefitsList
+				+benefitsItem(benItem)
+
+		+e.study
+			+e.study-title.title= lesson.title
+			+e.study-list
+				-
+					studyList = [{
+					textClass: 'green',
+					text: 'Станет любознательным и полюбит процесс обучения'
+					}, {
+					textClass: 'pink',
+					text: 'Научится общаться и дружить со сверстниками и взрослыми'
+					}, {
+					textClass: 'blue',
+					text: 'Подготовится к школе (цифры, буквы, логика, английский язык)'
+					}, {
+					textClass: 'yellow',
+					text: 'Раскроет таланты и способности к творчеству, пению, танцам или спорту'
+					}, {
+					textClass: 'azure',
+					text: 'Станет уверенным в себе и ответственным'
+					}, {
+					textClass: 'red',
+					text: 'Разовьет физические навыки и укрепит здоровье'
+					}]
+
+				mixin studyItem(item)
+					+e.study-item
+						+e.study-text(class= `_${item.textClass}`)
+							+e.P= item.text
+				each item in studyList
+					+studyItem(item)
+			+e.BUTTON.enroll-btn.btn._green(type='button') Записаться на пробное занятие

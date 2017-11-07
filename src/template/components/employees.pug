@@ -1,11 +1,11 @@
-if teachers ? teachers : teachers = []
-if teachers.title ? teachers.title : teachers.title = 'ВЫ МОЖЕТЕ ДОВЕРИТЬ НАМ СВОИХ ДЕТЕЙ'
+if employees ? employees : employees = []
+if employees.title ? employees.title : employees.title = 'ВЫ МОЖЕТЕ ДОВЕРИТЬ НАМ СВОИХ ДЕТЕЙ'
 
-//begin teachers
-+b.SECTION.teachers(class= teachers.classMod ? teachers.classMod : '')
+//begin employees
++b.SECTION.employees(class= employees.classMod ? employees.classMod : '')
 	+e.container.container
-		+e.H2.title.title= teachers.title
-		+e.slider.js-default-slider
+		+e.H2.title.title= employees.title
+		+e.slider.js-employees-slider
 			-i = 0
 			while i < 2
 				+e.person
@@ -32,4 +32,4 @@ if teachers.title ? teachers.title : teachers.title = 'ВЫ МОЖЕТЕ ДОВ�
 
 						+e.BUTTON.ask-btn.btn._green(type='button') Задать вопрос педагогу
 				-i++
-	+e.bg(style='background-image: url(static/img/bg/teachers_bg.jpg)')
+	+e.bg(style='background-image: url(static/img/bg/employees_bg.jpg)')
