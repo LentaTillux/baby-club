@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="51"
-     viewBox="0 0 56 56">
+     viewBox="0 0 58 56">
     <defs>
-        <path id="qevia"
+        <path id="w07ba"
               d="M1510.22 1669.24a25 25 0 1 1-50 .01 25 25 0 0 1 50 0s0-13.82 0 0zm-14.06 2.84a4.02 4.02 0 0 0 0-5.7l-11.63-11.62a4.04 4.04 0 0 0-5.7 5.7l8.79 8.77-8.78 8.8a4.03 4.03 0 0 0 5.7 5.68l11.62-11.63s-1.58 1.57 0 0z"/>
-        <path id="qevib"
+        <path id="w07bb"
               d="M1457 1698v-57h57v57zm53.22-28.76a25 25 0 1 0-50 0 25 25 0 0 0 50 0c0-13.8 0 0 0 0zm-14.06 2.84l-11.63 11.63a4.02 4.02 0 1 1-5.7-5.69l8.79-8.79-8.78-8.78a4.04 4.04 0 0 1 5.7-5.7l11.62 11.64a4.02 4.02 0 0 1 0 5.7c-1.58 1.56 0 0 0 0z"/>
-        <mask id="qevid" width="2" height="2" x="-1" y="-1">
+        <mask id="w07bd" width="2" height="2" x="-1" y="-1">
             <path fill="#fff" d="M1460 1644h51v51h-51z"/>
-            <use xlink:href="#qevia"/>
+            <use xlink:href="#w07ba"/>
         </mask>
-        <filter id="qevic" width="83.5" height="85.3" x="1450" y="1634" filterUnits="userSpaceOnUse">
-            <feOffset dx="2.5" dy="4.3" in="SourceGraphic" result="FeOffset1032Out"/>
-            <feGaussianBlur in="FeOffset1032Out" result="FeGaussianBlur1033Out" stdDeviation="2 2"/>
+        <filter id="w07bc" width="83.5" height="85.3" x="1450" y="1634" filterUnits="userSpaceOnUse">
+            <feOffset dx="2.5" dy="4.3" in="SourceGraphic" result="FeOffset1078Out"/>
+            <feGaussianBlur in="FeOffset1078Out" result="FeGaussianBlur1079Out" stdDeviation="2 2"/>
         </filter>
-        <clipPath id="qevie">
-            <use fill="#fff" xlink:href="#qevib"/>
+        <clipPath id="w07be">
+            <use fill="#fff" xlink:href="#w07bb"/>
         </clipPath>
     </defs>
     <g>
         <g opacity=".35" transform="translate(-1456 -1640)">
-            <g filter="url(#qevic)">
-                <use fill="none" stroke-opacity=".2" stroke-width="0" mask="url(&quot;#qevid&quot;)"
-                     xlink:href="#qevia"/>
-                <use fill-opacity=".2" xlink:href="#qevia"/>
+            <g filter="url(#w07bc)">
+                <use fill="none" stroke-opacity=".2" stroke-width="0" mask="url(&quot;#w07bd&quot;)"
+                     xlink:href="#w07ba"/>
+                <use fill-opacity=".2" xlink:href="#w07ba"/>
             </g>
-            <use fill="#2e3056" xlink:href="#qevia"/>
+            <use fill="#2e3056" xlink:href="#w07ba"/>
             <use fill="#fff" fill-opacity="0" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-                 stroke-miterlimit="50" stroke-width="6" clip-path="url(&quot;#qevie&quot;)" xlink:href="#qevia"/>
+                 stroke-miterlimit="50" stroke-width="6" clip-path="url(&quot;#w07be&quot;)" xlink:href="#w07ba"/>
         </g>
     </g>
 </svg>

@@ -1,3 +1,67 @@
 .teachers
+	position: relative
+	padding: 50px 0
 	&__container
+		max-width: 1420px
 	&__slider
+		display: none
+		padding: 0 51px
+		margin: 20px 0 0
+		&.slick-initialized
+			display: block
+		.slider-btn
+			position: absolute
+			width: 51px
+			height: 51px
+			top: 50%
+			margin-top: -25px
+			overflow: hidden
+			border-radius: 50%
+			&_prev
+				left: 0
+			&_next
+				right: 0
+	&__person
+		font-size: 0
+		cursor: grab
+		&-look
+			display: inline-block
+			vertical-align: middle
+			width: percentage(665 / 1170)
+			text-align: right
+			img
+				display: inline-block
+				vertical-align: bottom
+		&-speech
+			position: absolute
+			max-width: 270px
+			padding: 28px 30px 22px 30px
+			box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2)
+			border-radius: 28px
+			border: 3px solid $white
+			background-color: #cdecff
+			font-size: 17px
+		&-text
+			display: inline-block
+			vertical-align: middle
+			width: percentage(505 / 1170)
+			padding: 0 30px
+			font-size: 18px
+			strong
+				+f('mus-700')
+		&-name
+			+f('mus-700', 25, 28)
+			color: $black
+		&-pos
+			+f('mus-700', 18, 28)
+		&-edu
+			font-size: 18px
+			line-height: 35px
+	&__ask-btn
+		margin-top: 20px
+		padding: 0 53px
+	&__bg
+		+coverdiv
+		background-size: cover
+		background-repeat: no-repeat
+		z-index: -1
