@@ -1,0 +1,75 @@
+if programs ? programs : programs = []
+if programs.title ? programs.title : programs.title = 'ПРОГРАММЫ, КОТОРЫЕ РАСКРОЮТ ВАШЕГО РЕБЕНКА'
+
+//begin programs
++b.SECTION.programs(class= programs.classMod ? programs.classMod : '')
+	+e.container.container
+		+e.H2.title.title= programs.title
+		+e.list
+			-
+				programsList = [{
+				icon: 'bottle',
+				title: 'БЭБИК',
+				subTitle: 'от 8 месяцев до 1,5 лет',
+				descr: 'Развиваем познавательные, физические и социальные навыки вашего ребенка в доступной малышам игровой форме',
+				price: '5 200'
+				}, {
+				icon: 'key',
+				title: 'БЭБИ-КЛАСС',
+				subTitle: 'от 1,5 до 3 лет',
+				descr: 'Совершенно необыкновенные занятия для маленьких детей. На этих занятиях никто не учится — все просто играют!',
+				price: '4 600'
+				}, {
+				icon: 'fox',
+				title: 'БЭБИ-САД',
+				subTitle: 'от 2 до 5 лет',
+				descr: 'Ребенок знакомится с увлекательным миром цифр и логики. Участвует в играх, которые способствуют развитию навыков чтения',
+				price: '8 700'
+				}, {
+				icon: 'lamp',
+				title: 'БЭБИ-ЛАГЕРЬ',
+				subTitle: 'от 3 до 7 лет',
+				descr: 'Летний лагерь полного или частичного прибывания. Увлекательные тематики: научные опыты, динозавры, страны и континенты',
+				price: '6 800'
+				}, {
+				icon: 'tiger',
+				title: 'ТАНЦЫ',
+				subTitle: 'от 2 до 7 лет',
+				descr: 'Развиваем познавательные, физические и социальные навыки вашего ребенка в доступной малышам игровой форме',
+				price: '5 200'
+				}, {
+				icon: 'robot',
+				title: 'РИСОВАНИЕ',
+				subTitle: 'от 1,5 до 3 лет',
+				descr: 'Совершенно необыкновенные занятия для маленьких детей. На этих занятиях никто не учится — все просто играют!',
+				price: '4 600'
+				}, {
+				icon: 'angel',
+				title: 'ЛОГОПЕД',
+				subTitle: 'от 2 до 5 лет',
+				descr: 'Ребенок знакомится с увлекательным миром цифр и логики. Участвует в играх, которые способствуют развитию навыков чтения',
+				price: '4 600'
+				}, {
+				icon: 'fitnes',
+				title: 'ФИТНЕС',
+				subTitle: 'от 3 до 7 лет',
+				descr: 'Летний лагерь полного или частичного прибывания. Увлекательные тематики: научные опыты, динозавры, страны и континенты',
+				price: '6 800'
+				}]
+			mixin programsCard(item)
+				+e.card
+					+e.card-icon
+						+b.DIV(class=`icon icon-${item.icon}`)
+					+e.card-text
+						+e.H5.card-title= item.title
+						+e.card-sub-title= item.subTitle
+						+e.card-descr
+							+e.P= item.descr
+						+e.card-price от
+							=	' '
+							+e.SPAN= item.price
+							= ' '
+							| руб. в месяц
+					+e.BUTTON.details-btn.btn._green._md(type='button') Подробнее
+			each item in programsList
+				+programsCard(item)

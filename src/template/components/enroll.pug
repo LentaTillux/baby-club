@@ -1,0 +1,14 @@
+if enroll ? enroll : enroll = []
+if enroll.title ? enroll.title : enroll.title = 'ЗАПИШИТЕСЬ НА ПРОБНОЕ ЗАНЯТИЕ'
+
+//begin enroll
++b.SECTION.enroll(class= enroll.classMod ? enroll.classMod : '')
+	+e.container.container
+		+e.H2.title.title= enroll.title
+		+e.FORM.form(action='#!' method='POST')
+			+e.form-field
+				+e.INPUT.form-input.input(type='text' placeholder='Представтесь пожалуйста' name='' required)
+			+e.form-field
+				+e.INPUT.form-input.input(type='text' placeholder='Номер вашего телефона' name='' required)
+			+e.form-field
+				+e.INPUT.form-submit.btn._green._lg(type='submit' value='Записаться и получить скидку')

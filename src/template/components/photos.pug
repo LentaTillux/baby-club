@@ -1,0 +1,35 @@
+if photos ? photos : photos = []
+
+//begin photos
++b.SECTION.photos(class= photos.classMod ? photos.classMod : '')
+	+e.container.container
+		+e.inner
+			+e.slider.js-photos-slider
+				+e.slider-item
+					+e.slider-img
+						+e.IMG(src='static/img/content/photos-img.jpg' alt='image')
+					+e.slider-text
+						+e.P Комната отдыха детей
+						+e.P “Бэби клаб”
+				+e.slider-item
+					+e.slider-img
+						+e.IMG(src='https://beebom-redkapmedia.netdna-ssl.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg' alt='image')
+					+e.slider-text
+						+e.P Комната отдыха детей
+						+e.P “Бэби клаб”
+
+			+e.text
+				-
+					photosList = [
+					'12 высококвалифицированных воспитателей и педагогов',
+					'Уникальные обучающие программы для каждой возрастной группы',
+					'Индивидуальный подход к каждому ребенку на основании рекомендаций психолога',
+					'Обратная связь и открытые уроки для родителей',
+					'12 высококвалифицированных воспитателей и педагогов']
+				+e.UL.text-list
+					for photosText in photosList
+						+e.LI
+							+i('list-circle')
+							+e.SPAN= photosText
+
+	+e.bg(style='background-image: url(static/img/bg/photos_bg.png)')

@@ -14818,15 +14818,17 @@ var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function initSliders() {
-  var iconLeft = '<img src="static/img/icons/gray-arr_l.svg"/>';
-  var iconRight = '<img src="static/img/icons/gray-arr_r.svg"/>';
+  var grayIconLeft = '<img src="static/img/icons/gray-arr_l.svg"/>';
+  var grayIconRight = '<img src="static/img/icons/gray-arr_r.svg"/>';
+  var greenIconLeft = '<img src="static/img/icons/green-arr_l.svg"/>';
+  var greenIconRight = '<img src="static/img/icons/green-arr_r.svg"/>';
 
   var defaultOptions = {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 800,
-    prevArrow: '<button type="button" class="slider-btn slider-btn_prev">' + iconLeft + '</button>',
-    nextArrow: '<button type="button" class="slider-btn slider-btn_next">' + iconRight + '</button>',
+    prevArrow: '<button type="button" class="slider-btn slider-btn_prev">' + grayIconLeft + '</button>',
+    nextArrow: '<button type="button" class="slider-btn slider-btn_next">' + grayIconRight + '</button>',
     dots: false,
     cssEase: 'ease',
     useTransform: true,
@@ -14836,8 +14838,14 @@ function initSliders() {
     dotsClass: 'slider-dots'
   };
 
-  var $successSld = $('.js-employees-slider');
-  $successSld.slick($.extend({}, defaultOptions));
+  var $employeesSld = $('.js-employees-slider');
+  $employeesSld.slick($.extend({}, defaultOptions));
+
+  var $photosSld = $('.js-photos-slider');
+  $photosSld.slick($.extend({}, defaultOptions, {
+    prevArrow: '<button type="button" class="slider-btn slider-btn_prev">' + greenIconLeft + '</button>',
+    nextArrow: '<button type="button" class="slider-btn slider-btn_next">' + greenIconRight + '</button>'
+  }));
 }
 
 /***/ }),

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="31"
+     viewBox="0 0 42 38">
+    <defs>
+        <path id="k526a"
+              d="M228 3041a15 15 0 1 1 30 0 15 15 0 0 1-30 0c0-8.29 0 0 0 0zm8.44 1.7l6.97 6.98a2.41 2.41 0 1 0 3.42-3.42l-5.27-5.27 5.27-5.27a2.42 2.42 0 0 0-3.42-3.42l-6.97 6.98a2.41 2.41 0 0 0 0 3.42c.94.94 0 0 0 0z"/>
+        <path id="k526b"
+              d="M225 3059v-36h36v36zm3-18a15 15 0 1 0 30 0 15 15 0 0 0-30 0s0-8.29 0 0zm8.44 1.7a2.41 2.41 0 0 1 0-3.42l6.97-6.98a2.42 2.42 0 0 1 3.42 3.42l-5.27 5.27 5.27 5.27a2.41 2.41 0 1 1-3.42 3.42l-6.97-6.98s.94.94 0 0z"/>
+        <mask id="k526d" width="2" height="2" x="-1" y="-1">
+            <path fill="#fff" d="M228 3026h30v30h-30z"/>
+            <use xlink:href="#k526a"/>
+        </mask>
+        <filter id="k526c" width="62.5" height="64.3" x="218" y="3016" filterUnits="userSpaceOnUse">
+            <feOffset dx="2.5" dy="4.3" in="SourceGraphic" result="FeOffset1032Out"/>
+            <feGaussianBlur in="FeOffset1032Out" result="FeGaussianBlur1033Out" stdDeviation="2 2"/>
+        </filter>
+        <clipPath id="k526e">
+            <use fill="#fff" xlink:href="#k526b"/>
+        </clipPath>
+    </defs>
+    <g>
+        <g transform="translate(-223 -3021)">
+            <g filter="url(#k526c)">
+                <use fill="none" stroke-opacity=".2" stroke-width="0" mask="url(&quot;#k526d&quot;)"
+                     xlink:href="#k526a"/>
+                <use fill-opacity=".2" xlink:href="#k526a"/>
+            </g>
+            <use fill="#25a84a" xlink:href="#k526a"/>
+            <use fill="#fff" fill-opacity="0" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                 stroke-miterlimit="50" stroke-width="6" clip-path="url(&quot;#k526e&quot;)" xlink:href="#k526a"/>
+        </g>
+    </g>
+</svg>
