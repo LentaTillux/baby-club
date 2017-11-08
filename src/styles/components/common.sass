@@ -23,7 +23,28 @@ body
 	+f('mus-900', 34, 50)
 	text-align: center
 	color: $purple-dark
-
+	&_has-decor
+		line-height: 60px
+	&__decor
+		width: 160px
+		height: 60px
+		margin: -8px 10px 0
+		line-height: 60px
+		border-radius: 28px
+		+f('mus-700', 20)
+		&_green
+			display: inline-block
+			vertical-align: middle
+			box-shadow: inset 0 -4px 0 rgba(30, 132, 73, 0.5), 0 0 7px rgba(0, 0, 0, 0.1)
+			background-color: #25a84a
+			color: $white
+		&_gray
+			display: inline-block
+			vertical-align: middle
+			box-shadow: inset 0 -4px 0 rgba(148, 152, 150, 0.2), 0 0 7px rgba(0, 0, 0, 0.1)
+			background-color: #d8dddd
+			text-decoration: underline
+			
 // buttons
 .btn
 	display: inline-block
@@ -69,3 +90,20 @@ body
 	+f('mus-300', 17)
 	color: $purple-dark
 	+placeholder-color($gray)
+	
+// slider buttons
+.slider-btn
+	position: absolute
+	width: 51px
+	height: 51px
+	top: 50%
+	overflow: hidden
+	border-radius: 50%
+	opacity: .35
+	+trs
+	.no-touch &:hover
+		opacity: .8
+	&_prev
+		left: 0
+	&_next
+		right: 0

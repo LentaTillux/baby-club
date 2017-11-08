@@ -5,7 +5,7 @@ if employees.title ? employees.title : employees.title = 'ВЫ МОЖЕТЕ ДО
 +b.SECTION.employees(class= employees.classMod ? employees.classMod : '')
 	+e.container.container
 		+e.H2.title.title= employees.title
-		+e.slider.js-employees-slider
+		+e.slider.js-default-slider
 			-i = 0
 			while i < 2
 				+e.person

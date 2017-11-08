@@ -1,0 +1,43 @@
+if facts ? facts : facts = []
+if facts.title ? facts.title : facts.title = 'В ЦИФРАХ И ФАКТАХ'
+
+//begin facts
++b.SECTION.facts(class= facts.classMod ? facts.classMod : '')
+	+e.container.container
+		+e.title-wrap
+			+e.A.logo(href='#!')
+				+e.IMG(src='static/img/logo.svg' alt='Бэби клуб')
+			+e.H2.title.title= facts.title
+
+		+e.inner
+			-
+				factsList = [{
+				icon: '12',
+				text: 'опытных',
+				brText: 'педагогов'
+				}, {
+				icon: '15',
+				text: 'обучающих программ и кружков'
+				}, {
+				icon: '17',
+				text: 'лет занимаемся детским развитием'
+				}, {
+				icon: '356',
+				text: 'детей в среднем приходят',
+				brText: 'к нам еженедельно'
+				}, {
+				icon: '4567',
+				text: 'деток уже',
+				brText: 'обучили'}]
+
+			mixin factsItem(item)
+				+e.item
+					+e.item-icon
+						+b.DIV(class=`icon icon-${item.icon}`)
+					+e.item-text
+						+e.P=item.text
+							if item.brText
+								+e.BR
+								=item.brText
+			each item in factsList
+				+factsItem(item)
