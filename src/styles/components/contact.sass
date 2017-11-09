@@ -1,0 +1,142 @@
+.contact
+	padding: 110px 0 90px
+	&__title
+		+f('mus-700')
+	&__inner
+		margin: 40px 0 0
+		+clr
+	&__nav
+		float: left
+		width: 350px
+		padding-right: 20px
+		font-size: 17px
+		line-height: 35px
+	&__city
+		margin-bottom: 20px
+		&-current
+			display: inline-block
+			vertical-align: middle
+			min-width: 150px
+			height: 60px
+			padding: 0 10px
+			margin-right: 20px
+			box-shadow: inset 0 -4px 0 rgba(30, 132, 73, 0.5), 0 0 7px rgba(0, 0, 0, 0.1)
+			border-radius: 28px
+			background-color: #25a84a
+			color: $white
+			+f('mus-700', 20)
+			line-height: 60px
+			text-align: center
+		&-change
+			vertical-align: middle
+			+f('mus-700', 17)
+			border-bottom: 1px solid rgba($purple-dark, .6)
+			+trs
+			.no-touch &:hover
+				border-bottom-color: $purple-dark
+	&__metro
+		&-list
+			margin-top: 10px
+			max-width: 312px
+			font-size: 0
+		&-branch
+			display: inline-block
+			vertical-align: top
+			width: 25px
+			height: 25px
+			transform-origin: 61% 63%
+			transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+			color: $white
+			border-radius: 50%
+			text-align: center
+			+f('mus-700', 13, 23)
+			cursor: pointer
+			border: 2px solid transparent
+			&:not(:first-child)
+				margin-left: 6px
+			&:nth-child(11)
+				margin-left: 0
+			&.is-active
+				pointer-events: none
+				transform: scale(1.4)
+				border-color: $white
+				box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2)
+			&_1
+				background-color: #e42313
+			&_2
+				background-color: #4baf4f
+			&_3
+				background-color: #0572b9
+			&_4
+				background-color: #24bcef
+			&_5
+				background-color: #925233
+			&_6
+				background-color: #ef7e24
+			&_7
+				background-color: #943f90
+			&_8
+				background-color: #ffcd1e
+				color: #000
+			&_9
+				background-color: #adacac
+			&_10
+				background-color: #bed12e
+			&_11
+				border: 2px dotted #000
+				background-color: #fff
+				color: #000
+				&.is-active
+					border: 2px dotted #000
+			&_12
+				background-color: #bac8e8
+			&_13
+				background-color: #0572b9
+			&_14
+				border: 2px solid #e42518
+				background: #fff
+				color: #000
+				&.is-active
+					border: 2px solid #e42518
+			
+	&__info
+		padding: 20px 0 0
+		border-top: 1px solid #d8dddd
+		&-title
+			display: inline-block
+			+f('mus-700', 20, 22)
+			+trs
+			border-bottom: 1px solid rgba($purple-dark, .6)
+			.no-touch &:hover
+				border-bottom-color: $purple-dark
+			&.is-active
+				pointer-events: none
+				font-size: 25px
+				color: $black
+				border-bottom-color: transparent
+		&-item
+			&:not(:first-child)
+				margin-top: 10px
+		&-details
+			display: none
+		&-actions
+			font-size: 0
+			a
+				color: #28b463
+				+f('mus-700', 17)
+				border-bottom: 1px solid rgba(#28b463, .85)
+				+trs
+				.no-touch &:hover
+					border-bottom-color: #28b463
+				&:not(:first-child)
+					margin-left: 15px
+	&__map
+		position: relative
+		float: left
+		width: calc(100% - 350px)
+		+ratio(760, 651)
+		&-body
+			+coverdiv
+			overflow: hidden
+			box-shadow: 0 0 7px rgba(0, 0, 0, 0.2)
+			border-radius: 15px
