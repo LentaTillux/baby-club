@@ -1,19 +1,25 @@
 .why-us
 	position: relative
-	padding: 60px 0 80px
+	padding: 78px 0 90px
 	&__container
 		text-align: center
 	&__logo
 		display: inline-block
 		width: 265px
 	&__inner
-		margin: 40px 0
+		margin: 40px 0 20px
 		font-size: 0
+	&__title
+		margin-bottom: 5px
 	&__item
 		display: inline-block
-		vertical-align: top
+		vertical-align: middle
 		width: 50%
+		padding-right: 20px
+		padding-bottom: 20px
 		font-size: 0
+		&:nth-child(2n)
+			padding-left: 18px
 		&-icon
 			display: inline-block
 			vertical-align: middle
@@ -24,9 +30,12 @@
 			width: calc(100% - 120px)
 			font-size: 17px
 			text-align: left
+			padding: 0 18px
 	&__all-btn
 		padding: 0 40px
 	&__bg
 		+coverdiv
 		z-index: -1
-		+cover
+		background-size: 120%
+		background-repeat: no-repeat
+		background-position: 50% 50%

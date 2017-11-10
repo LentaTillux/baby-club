@@ -1,5 +1,5 @@
 .programs
-	padding: 125px 0 45px
+	padding: 125px 0 52px
 	&__list
 		margin: 35px -15px 0
 		font-size: 0
@@ -9,24 +9,29 @@
 		width: calc(25% - 30px)
 		min-height: 474px
 		margin: 0 15px 30px
-		padding: 0 15px
+		padding: 0 22px 0 25px
 		line-height: 22px
 		box-shadow: 0 0 7px rgba(0, 0, 0, 0.15)
 		border-radius: 15px
 		background-color: $white
 		text-align: center
 		&-icon
-			height: 190px
+			height: 162px
+			margin-bottom: 26px
 			+vertical
 			.icon
 				display: inline-block
-				vertical-align: middle
+				vertical-align: bottom
+			.icon-key
+				position: relative
+				top: -11px
 		&-text
 			text-align: left
 		&-title
 			margin-bottom: 5px
 			+f('mus-700', 25)
 			text-transform: uppercase
+			color: $black
 		&-sub-title
 			+f('mus-700', 25)
 			color: #25a84a
@@ -37,10 +42,12 @@
 			font-size: 15px
 			color: #5e5f78
 		&-price
-			margin-bottom: 10px
+			margin: 14px 0
 			text-transform: uppercase
 			+f('mus-700', 13, 20)
 			color: $black
 			span
+				display: inline-block
+				margin: 0 4px
 				vertical-align: bottom
 				+f('mus-900', 22)

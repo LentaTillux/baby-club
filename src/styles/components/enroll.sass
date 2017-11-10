@@ -1,19 +1,23 @@
 .enroll
 	position: relative
-	padding: 80px 0
+	padding: 68px 0
 	&::after
 		+coverdiv
 		+cover
 		z-index: -1
 		content: ''
 		background: #ffc556 url("../img/bg/enroll_bg.png")
+	&__container
+		max-width: 1130px
 	&__title
-		margin-bottom: 30px
+		margin-bottom: 28px
 		color: $black
 	&__form
 		display: flex
 		justify-content: space-between
 		&-field
 			flex: 0 1 350px
+		&-input
+			height: 60px
 		&-submit
 			padding: 0 28px
