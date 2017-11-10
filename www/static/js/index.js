@@ -3868,8 +3868,9 @@ function initContactBlock() {
   chooseBranch();
 
   function init() {
+    var moscowCenter = [55.75366848567328, 37.621676554687504];
     var contactMapMoscow = new ymaps.Map('contact-map-moscow', {
-      center: [55.75366848567328, 37.621676554687504],
+      center: moscowCenter,
       zoom: 10,
       controls: []
     }),
@@ -3895,6 +3896,8 @@ function initContactBlock() {
         e.preventDefault();
         var $that = $(this);
         var $branchNumber = $that.index() + 1;
+
+        contactMapMoscow.setCenter(moscowCenter, 10);
 
         switch ($branchNumber) {
           case 1:
@@ -3952,9 +3955,7 @@ function initContactBlock() {
       var $that = $(this);
       var $clubCoords = $that.data('club-coords');
 
-      contactMapMoscow.panTo($clubCoords, {
-        duration: 1000
-      });
+      contactMapMoscow.setCenter($clubCoords, 16, { checkZoomRange: true });
     });
   }
 

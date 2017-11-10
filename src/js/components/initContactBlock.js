@@ -10,8 +10,9 @@ export function initContactBlock() {
   chooseBranch();
 
   function init() {
+    const moscowCenter = [55.75366848567328, 37.621676554687504];
     const contactMapMoscow = new ymaps.Map('contact-map-moscow', {
-        center: [55.75366848567328, 37.621676554687504],
+        center: moscowCenter,
         zoom: 10,
         controls: []
       }),
@@ -37,6 +38,8 @@ export function initContactBlock() {
         e.preventDefault();
         const $that = $(this);
         const $branchNumber = $that.index() + 1;
+
+        contactMapMoscow.setCenter(moscowCenter, 10);
 
         switch ($branchNumber) {
           case 1:
@@ -95,9 +98,7 @@ export function initContactBlock() {
       const $that = $(this);
       const $clubCoords = $that.data('club-coords');
 
-      contactMapMoscow.panTo($clubCoords, {
-        duration: 1000
-      });
+      contactMapMoscow.setCenter($clubCoords, 16, { checkZoomRange: true });
     });
 
   }
