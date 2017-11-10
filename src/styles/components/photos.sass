@@ -2,7 +2,13 @@
 	position: relative
 	padding: 226px 0 34px
 	margin-top: -50px
+	+sm
+		padding: 175px 0 30px
+	+xs
+		margin-top: 0
+		padding: 50px 0 30px
 	&::before
+		display: none
 		position: absolute
 		top: -4px
 		left: 0
@@ -12,14 +18,28 @@
 		background: url("../img/bg/photos-decor.png") no-repeat 50% 50% / cover
 		content: ''
 		pointer-events: none
-	&__container
+		+r(1899)
+			display: block
+		+sm
+			top: -40px
+			left: -150px
+			transform: rotate(6deg)
+		+xs
+			display: none
 	&__inner
 		margin: 0 -15px
 		font-size: 0
+		+sm
+			margin: 0 -5px
 	&__slider
 		display: inline-block
 		vertical-align: middle
 		width: 50%
+		+sm
+			display: block
+			width: 100%
+			max-width: 570px
+			margin: 0 auto
 		.slick-list
 			padding: 0 0 50px
 		.slider-btn
@@ -28,17 +48,25 @@
 			height: 42px
 			z-index: 1
 			opacity: 1
+			+sm
+				top: 82%
 			img
 				display: block
 				width: 100%
 				height: 100%
 			&_prev
 				left: -5px
+				+sm
+					left: 5px
 			&_next
 				right: -5px
+				+sm
+					right: 5px
 		&-item
 			position: relative
 			padding: 0 13px
+			+sm
+				padding: 0
 		&-img
 			height: 365px
 			border-radius: 40px
@@ -46,7 +74,8 @@
 			overflow: hidden
 			box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1)
 			+cover-img
-			img
+			+sm
+				height: 250px
 		&-text
 			position: absolute
 			left: 16%
@@ -71,6 +100,11 @@
 		vertical-align: middle
 		width: 50%
 		padding: 0 30px
+		+sm
+			width: 100%
+			margin-top: 15px
+		+sm
+			padding: 0 10px
 		&-list
 			li
 				display: flex

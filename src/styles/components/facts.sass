@@ -1,11 +1,14 @@
 .facts
 	position: relative
 	padding: 80px 0
-	&__container
+	+md
+		padding: 60px 0 30px
 	&__title-wrap
 		margin-bottom: 50px
 		font-size: 0
 		text-align: center
+		+sm
+			margin-bottom: 30px
 	&__logo
 		display: inline-block
 		vertical-align: middle
@@ -22,6 +25,11 @@
 		vertical-align: top
 		width: 20%
 		padding: 0 15px
+		+md
+			width: 33.33333%
+			padding: 0 15px 30px
+		+xs
+			min-width: 250px
 		&-icon
 			height: 62px
 			margin-bottom: 4px

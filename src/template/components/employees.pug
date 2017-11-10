@@ -10,7 +10,8 @@ if employees.title ? employees.title : employees.title = 'ВЫ МОЖЕТЕ ДО
 			while i < 2
 				+e.person
 					+e.person-look
-						+e.IMG(src='static/img/content/smirnova.png' alt='Смирнова Александра Андреевна')
+						+e.person-look-pic
+							+e.IMG(src='static/img/content/smirnova.png' alt='Смирнова Александра Андреевна')
 						+e.person-speech
 							+e.P Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.
 					+e.person-text

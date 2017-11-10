@@ -1,6 +1,12 @@
 .why-us
 	position: relative
 	padding: 78px 0 90px
+	+md
+		padding: 50px 0
+	+sm
+		padding: 50px 0 25px
+	+xs
+		padding: 0 0 25px
 	&__container
 		text-align: center
 	&__logo
@@ -9,6 +15,8 @@
 	&__inner
 		margin: 40px 0 20px
 		font-size: 0
+		+sm
+			margin: 20px 0
 	&__title
 		margin-bottom: 5px
 	&__item
@@ -18,12 +26,35 @@
 		padding-right: 20px
 		padding-bottom: 20px
 		font-size: 0
+		+md
+			padding-right: 0
+		+sm
+			width: 100%
+			text-align: left
+			padding-bottom: 0
+		+xs
+			padding-bottom: 15px
 		&:nth-child(2n)
 			padding-left: 18px
+			+sm
+				padding-left: 0
 		&-icon
 			display: inline-block
 			vertical-align: middle
 			width: 120px
+			+sm
+				transform: scale(0.7)
+			+xs
+				display: block
+				margin: 0 auto
+			.icon-key
+				+sm
+					position: relative
+					left: -20px
+			.icon-carrot
+				+sm
+					position: relative
+					left: -20px
 		&-text
 			display: inline-block
 			vertical-align: middle
@@ -31,11 +62,24 @@
 			font-size: 17px
 			text-align: left
 			padding: 0 18px
+			+sm
+				padding: 0
+			+xs
+				width: 100%
+				text-align: center
 	&__all-btn
 		padding: 0 40px
+		+xs
+			padding: 0 25px
 	&__bg
 		+coverdiv
 		z-index: -1
 		background-size: 120%
 		background-repeat: no-repeat
 		background-position: 50% 50%
+		+lg
+			background-size: 155%
+		+sm
+			background-size: 270%
+		+xs
+			background-size: 910%

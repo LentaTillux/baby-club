@@ -1,8 +1,14 @@
 .enroll
 	position: relative
 	padding: 68px 0
+	+sm
+		padding: 25px 0 10px
 	&::after
-		+coverdiv
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
 		+cover
 		z-index: -1
 		content: ''
@@ -12,12 +18,34 @@
 	&__title
 		margin-bottom: 28px
 		color: $black
+		+sm
+			margin-bottom: 20px
 	&__form
 		display: flex
 		justify-content: space-between
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+		+xs
+			flex-direction: column
+			max-width: 350px
+			margin: 0 auto
 		&-field
 			flex: 0 1 350px
+			+md
+				flex: 0 1 290px
+			+sm
+				flex: 0 1 50%
+				padding: 0 10px 20px
+			+xs
+				flex: 1 0 auto
+				text-align: center
+				padding: 0 0 20px
 		&-input
 			height: 60px
 		&-submit
 			padding: 0 28px
+			+xs
+				padding: 0
+				width: 100%
+				font-size: 18px

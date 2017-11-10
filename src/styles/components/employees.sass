@@ -1,21 +1,46 @@
 .employees
 	position: relative
 	padding: 88px 0 0
+	+sm
+		padding: 70px 0 0
+	+xs
+		padding: 30px 0 0
 	&__container
 		max-width: 1420px
+	&__title
+		+sm
+			margin-bottom: 20px
+			font-size: 32px
 	&__slider
 		display: none
 		padding: 0 35px 0 65px
 		margin: 27px 0 0
+		+lg
+			padding: 0 51px
+		+sm
+			margin: 0 -15px
+			padding: 0 38px
+		+xs
+			margin: 0
+			padding: 0
 		&.slick-initialized
 			display: block
 		.slider-btn
 			top: 45%
 			margin-top: -25px
+			+sm
+				width: 40px
+				height: 40px
 			&_next
 				right: -15px
+				+lg
+					right: 0
 			&_prev
 				left: 15px
+				+lg
+					left: 0
+				+xs
+					display: none!important
 	&__person
 		font-size: 0
 		cursor: default
@@ -25,11 +50,23 @@
 			vertical-align: middle
 			width: percentage(665 / 1170)
 			text-align: right
-			img
+			+sm
+				vertical-align: bottom
+				width: 50%
+			+xs
+				width: 100%
+			&-pic
+				position: relative
+				padding-top: 68.5%
+				width: percentage(461 / 733)
 				display: inline-block
 				vertical-align: bottom
-				position: relative
 				z-index: 2
+				+sm
+					padding-top: 100%
+					width: 100%
+			img
+				+coverdiv
 		&-speech
 			position: absolute
 			top: 22%
@@ -43,12 +80,30 @@
 			background-color: #cdecff
 			text-align: left
 			font-size: 17px
+			+lg
+				left: 12%
+			+md
+				left: 2%
+				padding: 20px 20px 20px 28px
+			+sm
+				display: none
 		&-text
 			display: inline-block
 			vertical-align: middle
 			width: percentage(505 / 1170)
 			padding: 0 28px 0 20px
 			font-size: 18px
+			+md
+				font-size: 17px
+				padding: 0 15px 0 20px
+			+sm
+				vertical-align: top
+				padding-top: 25px
+				width: 50%
+			+xs
+				width: 100%
+				padding: 35px 0 0
+				text-align: center
 			strong
 				+f('mus-700')
 		&-name
@@ -56,17 +111,31 @@
 			color: $black
 		&-pos
 			+f('mus-700', 18, 28)
+			+md
+				font-size: 17px
 		&-edu
 			margin-top: 15px
 			font-size: 18px
 			line-height: 20px
+			+md
+				margin-top: 4px
 			& ~ p
 				margin-top: 12px
+				+md
+					margin-top: 6px
 	&__ask-btn
 		margin-top: 25px
 		padding: 0 53px
+		+md
+			margin-top: 15px
+			padding: 0 25px
 	&__bg
 		+coverdiv
-		background-size: cover
-		background-repeat: no-repeat
 		z-index: -1
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 0
+		+lg
+			background-position: 50% 16px
+		+xs
+			display: none

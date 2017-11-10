@@ -1,8 +1,14 @@
 .lesson
 	padding: 106px 0 0
+	+md
+		padding: 60px 0 0
 	&__benefits
 		margin: 0 -15px 75px
 		font-size: 0
+		+md
+			margin: 0 -15px 50px
+		+sm
+			text-align: center
 		$parent: &
 		&-item
 			display: inline-block
@@ -10,6 +16,11 @@
 			width: 25%
 			padding: 0 15px
 			text-align: center
+			+md
+				padding: 0 10px
+			+sm
+				width: 285px
+				padding: 0 15px
 			&:nth-child(4) #{$parent}-text
 				padding: 55px 10px 34px
 		&-icon
@@ -58,6 +69,10 @@
 			border-radius: 40px
 			background-color: #f4f4f4
 			+f('mus-700', 17)
+			+md
+				font-size: 16px
+			+sm
+				font-size: 17px
 			
 	&__study
 		text-align: center
@@ -71,13 +86,22 @@
 			width: 33.33333%
 			padding: 0 35px 40px 0
 			text-align: left
+			+sm
+				width: 50%
+				padding: 0 20px 30px 0
+			+xs
+				width: 100%
 			&:nth-child(3n)
 				padding: 0 25px 40px 10px
+				+sm
+					padding: 0 20px 30px 0
 		&-text
 			position: relative
 			padding-left: 30px
 			font-size: 18px
 			line-height: 22px
+			+xs
+				font-size: 17px
 			p
 				padding: 0 15px
 			&_green::before
@@ -94,7 +118,8 @@
 				color: #ea242b
 			&::before
 				position: absolute
-				top: 15px
+				top: 50%
+				margin-top: -11px
 				left: 7px
 				counter-increment: studyCount
 				content: counter(studyCount)
@@ -102,3 +127,8 @@
 	&__enroll-btn
 		position: relative
 		z-index: 10
+		+xs
+			width: 100%
+			max-width: 350px
+			padding: 0
+			font-size: 18px

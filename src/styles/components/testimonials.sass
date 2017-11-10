@@ -2,44 +2,81 @@
 	position: relative
 	padding: 95px 0 55px
 	border-bottom: 24px solid #fcfbfd
+	+md
+		border: 0
+	+xs
+		padding: 20px 0 40px
 	&__container
 		max-width: 1420px
 	&__title
 		padding-left: 60px
+		+sm
+			padding-left: 0
+		+xs
+			max-width: 300px
+			margin: 0 auto
 	&__slider
 		display: none
 		margin-top: 40px
 		padding: 0 51px
+		+sm
+			padding: 0 20px
+		+xs
+			padding: 0 0 10px
 		&.slick-initialized
 			display: block
 		.slider-btn
+			z-index: 100
 			top: 27%
+			+xs
+				top: 100%
+				width: 34px
+				height: 34px
 			&_prev
 				left: 0
 			&_next
-				right: -16px
+				right: -14px
+				+lg
+					right: 0
 		&-item
 			padding: 0 59px
 			font-size: 0
 			cursor: default
+			+sm
+				padding: 0
 	&__video
 		position: absolute
 		top: 76px
 		left: 118px
 		width: 386px
 		height: 228px
+		+xs
+			position: static
+			height: 250px
+			width: auto
+			border-radius: 10px
+			overflow: hidden
 		&-wrap
 			position: relative
 			display: inline-block
 			vertical-align: middle
 			width: percentage(684 / 1170)
 			height: 358px
+			+md
+				display: block
+				margin: 0 auto
+				max-width: 684px
+				width: 100%
+			+xs
+				height: auto
 			&::after
 				+coverdiv
 				pointer-events: none
 				z-index: 100
 				background: url(../img/bg/tv-mask.png) no-repeat 50% 50% / cover
 				content: ''
+				+xs
+					display: none
 			iframe
 				position: relative
 				z-index: 99
@@ -51,6 +88,13 @@
 		vertical-align: middle
 		width: percentage(448 / 1170)
 		margin-left: -35px
+		+md
+			width: 100%
+			margin: 20px 0 0
+		+sm
+			padding: 0 20px 0 80px
+		+xs
+			padding: 0
 		&-title
 			+f('mus-700', 25, 28)
 			color: $black
@@ -67,9 +111,14 @@
 				&-quote-l
 					top: 9px
 					left: 2px
+					+sm
+						top: 0
+						left: 0
 				&-quote-r
 					right: 0
 					bottom: -4px
+					+sm
+						bottom: 0
 	&__bg
 		+coverdiv
 		z-index: -1

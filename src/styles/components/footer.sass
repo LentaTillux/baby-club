@@ -1,12 +1,20 @@
 .footer
 	padding: 50px 0 34px
 	background-color: rgba(#ededed, .6)
+	+sm
+		padding: 25px 0 30px
 	&__container
 		display: flex
 		align-items: flex-start
+		+sm
+			align-items: center
+		+xs
+			flex-direction: column
 	&__logo
 		width: 319px
 		text-align: center
+		+sm
+			width: 100%
 		.logo__descr
 			font-size: 16px
 			padding-left: 0
@@ -14,9 +22,14 @@
 		flex: 1 1 auto
 		padding-left: 34px
 		text-align: right
+		+xs
+			padding-left: 0
+			margin-top: 10px
 	&__dev
 		display: inline-block
 		margin-top: 20px
+		+xs
+			margin-top: 0
 		.icon-dev
 			display: inline-block
 			vertical-align: middle

@@ -126,11 +126,14 @@
                 <a href="#!">Контакты</a>
               </li>
             </ul>
+            <button class="nav__call-btn btn btn_green btn_sm" type="button">Обратный звонок</button>
           </nav>
+          <button class="hamburger header__hamburger hamburger--collapse js-hamburger" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
-        <!--button.hamburger.header__hamburger.hamburger--spring.js-hamburger(type='button')-->
-        <!--	span.hamburger-box-->
-        <!--		span.hamburger-inner-->
       </div>
     </header>
     <main class="content"></main>
@@ -213,7 +216,9 @@
         <div class="employees__slider js-default-slider">
           <div class="employees__person">
             <div class="employees__person-look">
-              <img src="static/img/content/smirnova.png" alt="Смирнова Александра Андреевна" title="" />
+              <div class="employees__person-look-pic">
+                <img src="static/img/content/smirnova.png" alt="Смирнова Александра Андреевна" title="" />
+              </div>
               <div class="employees__person-speech">
                 <p>Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.</p>
               </div>
@@ -233,7 +238,9 @@
           </div>
           <div class="employees__person">
             <div class="employees__person-look">
-              <img src="static/img/content/smirnova.png" alt="Смирнова Александра Андреевна" title="" />
+              <div class="employees__person-look-pic">
+                <img src="static/img/content/smirnova.png" alt="Смирнова Александра Андреевна" title="" />
+              </div>
               <div class="employees__person-speech">
                 <p>Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.</p>
               </div>
@@ -630,8 +637,500 @@
         </div>
       </div>
     </section>
-    <!--include ../components/testimonials-->
-    <!--include ../components/contact-->
+    <!--begin testimonials-->
+    <section class="testimonials">
+      <div class="testimonials__container container">
+        <h2 class="title title_has-decor testimonials__title">ОТЗЫВЫ
+          <span class="title__decor title__decor_green">РОДИТЕЛЕЙ</span> И ИХ
+          <span class="title__decor title__decor_gray">ДЕТОК</span>
+        </h2>
+        <div class="testimonials__slider js-default-slider">
+          <div class="testimonials__slider-item">
+            <div class="testimonials__video-wrap">
+              <div class="testimonials__video">
+                <iframe src="https://www.youtube.com/embed/eXDU9um19HM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <div class="testimonials__text">
+              <h5 class="testimonials__text-title">Вероника, мама Глеба и Матвея</h5>
+              <p class="testimonials__text-sub-title">Глеб и Матвей посещают "БейбиКлуб"</p>
+              <div class="testimonials__text-descr">
+                <p>Я мама двоих детей. С моим младшим сыном Глебом мы начали ходить в «Бейбиклуб », когда ему было 1,5 года. В этом году он идет в первый класс. Начинали мы заниматься с кружка «Малышок», когда исполнилось 4 года пришли на занятия в кружок
+                  «Кубики», где сын научился уверенно читать, писать, складывать и вычитать не только простые, но и двухзначные числа.</p>
+                <svg class="icon icon-quote-l">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-quote-l"></use>
+                </svg>
+                <svg class="icon icon-quote-r">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-quote-r"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials__slider-item">
+            <div class="testimonials__video-wrap">
+              <div class="testimonials__video">
+                <iframe src="https://www.youtube.com/embed/eXDU9um19HM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <div class="testimonials__text">
+              <h5 class="testimonials__text-title">Вероника, мама Глеба и Матвея</h5>
+              <p class="testimonials__text-sub-title">Глеб и Матвей посещают "БейбиКлуб"</p>
+              <div class="testimonials__text-descr">
+                <p>Я мама двоих детей. С моим младшим сыном Глебом мы начали ходить в «Бейбиклуб », когда ему было 1,5 года. В этом году он идет в первый класс. Начинали мы заниматься с кружка «Малышок», когда исполнилось 4 года пришли на занятия в кружок
+                  «Кубики», где сын научился уверенно читать, писать, складывать и вычитать не только простые, но и двухзначные числа.</p>
+                <svg class="icon icon-quote-l">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-quote-l"></use>
+                </svg>
+                <svg class="icon icon-quote-r">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-quote-r"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__bg" style="background-image: url(static/img/bg/photos_bg.png);"></div>
+    </section>
+    <!--begin contact-->
+    <section class="contact">
+      <div class="contact__container container">
+        <h2 class="contact__title title">ПРИХОДИТЕ В ГОСТИ, ЧТОБЫ УВИДЕТЬ ВСЁ СВОИМИ ГЛАЗАМИ</h2>
+        <div class="contact__inner">
+          <div class="contact__nav">
+            <div class="contact__city">
+              <span class="contact__city-current">г. Москва</span>
+              <a class="contact__city-change" href="#!">Сменить город</a>
+            </div>
+            <div class="contact__metro">
+              <p class="contact__metro-text">Удобная для Вас ветка Метро:</p>
+              <ul class="contact__metro-list js-branch-list">
+                <li class="contact__metro-branch contact__metro-branch_1">1</li>
+                <li class="contact__metro-branch contact__metro-branch_2">2</li>
+                <li class="contact__metro-branch contact__metro-branch_3">3</li>
+                <li class="contact__metro-branch contact__metro-branch_4">4</li>
+                <li class="contact__metro-branch contact__metro-branch_5">5</li>
+                <li class="contact__metro-branch contact__metro-branch_6">6</li>
+                <li class="contact__metro-branch contact__metro-branch_7">7</li>
+                <li class="contact__metro-branch contact__metro-branch_8">8</li>
+                <li class="contact__metro-branch contact__metro-branch_9">9</li>
+                <li class="contact__metro-branch contact__metro-branch_10">10</li>
+                <li class="contact__metro-branch contact__metro-branch_11">11</li>
+                <li class="contact__metro-branch contact__metro-branch_12">12</li>
+                <li class="contact__metro-branch contact__metro-branch_13">13</li>
+                <li class="contact__metro-branch contact__metro-branch_14">14</li>
+              </ul>
+            </div>
+            <div class="contact__info js-contact-info">
+              <div class="contact__info-tab">
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">в Бескудниково</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Алексеевской</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Аэропорте</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Астрадамской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Беломорской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__info-tab">
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">в Бескудниково</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Алексеевской</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Аэропорте</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Астрадамской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Беломорской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__info-tab">
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">в Бескудниково</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Алексеевской</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Аэропорте</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Астрадамской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Беломорской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__info-tab">
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">в Бескудниково</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Алексеевской</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <a class="contact__info-title" href="#!">на Аэропорте</a>
+                  <div class="contact__info-details">
+                    <div class="contact__info-details-field">
+                      <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                    </div>
+                    <div class="contact__info-details-field">
+                      <a href="tel:+79154742323">+7 915 4742323</a>
+                    </div>
+                    <div class="contact__info-actions">
+                      <a href="#!">На карте</a>
+                      <a href="#!">На страницу клуба</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Астрадамской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__info-tab-item">
+                  <div class="contact__info-item">
+                    <a class="contact__info-title" href="#!">на Беломорской</a>
+                    <div class="contact__info-details">
+                      <div class="contact__info-details-field">
+                        <p>Бескудниковский прд, д. 4, корп. 2.</p>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
+                      </div>
+                      <div class="contact__info-details-field">
+                        <a href="tel:+79154742323">+7 915 4742323</a>
+                      </div>
+                      <div class="contact__info-actions">
+                        <a href="#!">На карте</a>
+                        <a href="#!">На страницу клуба</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--begin socials-->
+            <div class="socials contact__socials">
+              <a class="socials__link socials__link_vk" href="#!" target="_blank">
+                <svg class="icon icon-vk">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+              <a class="socials__link socials__link_fb" href="#!" target="_blank">
+                <svg class="icon icon-facebook">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+              <a class="socials__link socials__link_inst" href="#!" target="_blank">
+                <svg class="icon icon-instagram">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="contact__map">
+            <div class="contact__map-body" id="contact-map-moscow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--begin footer-->
     <footer class="footer">
       <div class="footer__container container">

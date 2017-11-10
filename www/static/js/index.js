@@ -745,7 +745,7 @@ var MobNav = exports.MobNav = function () {
     value: function toggleNav() {
       this.$btn.on('click', function () {
         $(this).toggleClass(_helpers.css.active);
-        $(this).closest('.header__contact').next(this.$nav).toggleClass(_helpers.css.active);
+        $(this).prev(this.$nav).toggleClass(_helpers.css.active);
         _helpers.$body.toggleClass(_helpers.css.locked);
       });
     }

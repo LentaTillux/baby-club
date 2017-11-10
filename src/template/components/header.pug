@@ -36,7 +36,8 @@
 					for navLink, index in navList
 						-activeIndex = 1
 						li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink
+				+e.BUTTON.call-btn.btn._green._sm(type='button') Обратный звонок
 
-		//button.hamburger.header__hamburger.hamburger--spring.js-hamburger(type='button')
-		//	span.hamburger-box
-		//		span.hamburger-inner
+			button.hamburger.header__hamburger.hamburger--collapse.js-hamburger(type='button')
+				span.hamburger-box
+					span.hamburger-inner

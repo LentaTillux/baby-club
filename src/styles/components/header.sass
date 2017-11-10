@@ -1,17 +1,39 @@
 .header
 	padding: 46px 0 55px
+	+md
+		padding: 35px 0
+	+sm
+		padding: 30px 0 20px
+	+xs
+		padding: 20px 0
 	&__container
 		display: flex
 		justify-content: space-between
+		+xs
+			align-items: center
 	&__logo
 		width: percentage(358 /1110)
+		+sm
+			width: 30%
+		+xs
+			width: 220px
+			position: relative
+			z-index: 100
 	&__info
 		width: 66.2%
+		+sm
+			width: 70%
+		+xs
+			width: auto
 	&__contacts
 		display: flex
 		justify-content: space-between
 		align-items: center
 		padding-bottom: 15px
+		+sm
+			padding-left: 15px
+		+xs
+			display: none
 		&-block
 			a
 				+f('mus-300', 15, 15)
@@ -32,13 +54,29 @@
 		&-text
 			display: block
 			+f('mus-700', 18, 22)
+			+md
+				font-size: 16px
 		&-tel
 			margin-top: -12px
 			font-size: 26px
+			+md
+				margin-top: 0
+				font-size: 18px
+			+sm
+				display: none
 			span
 				+f('mus-900')
 		&-btn
 			margin-top: -16px
+			+md
+				margin-top: 0
+			+xs
+				display: none
+	&__hamburger
+		+xs
+			position: relative
+			display: block
+			z-index: 100
 
 .logo
 	text-align: left
@@ -51,11 +89,15 @@
 		padding-left: 20px
 		font-size: 20px
 		line-height: 1
+		+md
+			padding-left: 0
+			text-align: center
+			font-size: 16px
+		+xs
+			display: none
 	
 .nav
 	$parent: &
-	+sm
-		padding: 13px 0
 	+xs
 		display: flex
 		flex-direction: column
@@ -63,7 +105,7 @@
 		position: absolute
 		width: 100%
 		height: 100vh
-		top: 60px
+		top: 0
 		left: 0
 		bottom: 0
 		right: 0
@@ -86,12 +128,15 @@
 		justify-content: space-between
 		#{$parent}_header &
 			padding-left: 24px
+			+sm
+				padding-left: 10px
+			+xs
+				padding: 0
 		+xs
 			flex-direction: column
 			justify-content: center
-			margin-top: -60px
 			overflow: auto
-			padding: 0
+			margin-bottom: 20px
 		li
 			+xs
 				margin: 8px 0
@@ -105,7 +150,7 @@
 			border-bottom: 1px solid rgba($black, .5)
 			+trs
 			+sm
-				font-size: 14px
+				font-size: 13px
 			+xs
 				display: block
 				padding: 10px
@@ -113,3 +158,16 @@
 				color: #fff
 			.no-touch &:hover
 				border-bottom-color: $black
+	&__call-btn
+		display: none
+		margin: 0 10px
+		+xs
+			display: block
+	&_footer
+		+sm
+			display: none!important
+			
+.hamburger
+	&.is-active
+		.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+			background: #fff

@@ -1,28 +1,60 @@
 .hero
 	position: relative
 	padding: 50px 0 66px
+	+xs
+		height: calc(100vh - 80px)
+		padding: 0
+		+vertical
 	&__container
 		+clr
+		+xs
+			display: inline-block
+			vertical-align: middle
 	&__inner
 		float: right
 		width: 100%
 		max-width: 540px
 		padding: 0 30px
 		text-align: center
+		+sm
+			max-width: 460px
+			padding: 0
+		+xs
+			max-width: 370px
+			margin: 0 auto
+			float: none
 	&__title
 		margin-bottom: 4px
 		+f('mus-900', 34, 45)
+		+sm
+			font-size: 32px
+			line-height: 42px
+		+xs
+			font-size: 25px
+			line-height: 32px
 	&__sub-title
 		margin-bottom: 25px
 		font-size: 25px
 		line-height: 35px
+		+sm
+			padding: 0 10px
+			font-size: 23px
+			line-height: 30px
+		+xs
+			padding: 0
+			font-size: 21px
+			line-height: 27px
 	&__form
 		max-width: 350px
 		margin: 0 auto
 		&-field
 			margin-bottom: 15px
+		&-submit
+			+xs
+				padding: 0 20px
 	&__bg
 		+coverdiv
-		background-size: cover
-		background-repeat: no-repeat
+		+cover
 		z-index: -1
+		+xs
+			background-position: 0 top

@@ -1,19 +1,34 @@
 .contact
 	padding: 80px 0 90px
+	+sm
+		padding: 50px 0 40px
 	&__title
 		text-align: left
 		+f('mus-700')
+		+md
+			text-align: center
 	&__inner
 		margin: 28px 0 0
-		+clr
+		font-size: 0
+		+sm
+			display: flex
+			flex-direction: column
 	&__nav
-		float: left
+		display: inline-block
+		vertical-align: middle
 		width: 350px
 		padding-right: 20px
 		font-size: 17px
 		line-height: 35px
+		+sm
+			width: 100%
+			padding-right: 0
+			order: 1
+			margin-top: 25px
 	&__city
 		margin-bottom: 15px
+		+sm
+			text-align: center
 		&-current
 			display: inline-block
 			vertical-align: middle
@@ -36,10 +51,14 @@
 			.no-touch &:hover
 				border-bottom-color: $purple-dark
 	&__metro
+		+sm
+			text-align: center
 		&-list
 			margin-top: 10px
 			max-width: 312px
 			font-size: 0
+			+sm
+				max-width: none
 		&-branch
 			display: inline-block
 			vertical-align: top
@@ -56,8 +75,12 @@
 			user-select: none
 			&:not(:first-child)
 				margin-left: 6px
+				+sm
+					margin-left: 10px
 			&:nth-child(11)
 				margin-left: 0
+				+sm
+					margin-left: 10px
 			&.is-active
 				pointer-events: none
 				transform: scale(1.4)
@@ -106,6 +129,10 @@
 		margin-top: 20px
 		padding: 20px 0 0
 		border-top: 1px solid #d8dddd
+		+sm
+			min-height: 220px
+			max-width: 400px
+			margin: 20px auto 0
 		&-tab
 			&:not(:first-child)
 				display: none
@@ -149,11 +176,18 @@
 					margin-left: 15px
 	&__socials
 		margin-top: 30px
+		+md
+			margin-top: 15px
+		+sm
+			justify-content: center
 	&__map
 		position: relative
-		float: left
+		display: inline-block
+		vertical-align: middle
 		width: calc(100% - 350px)
 		+ratio(760, 651)
+		+sm
+			width: 100%
 		&-body
 			+coverdiv
 			overflow: hidden
