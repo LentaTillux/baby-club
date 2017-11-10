@@ -1,16 +1,21 @@
 .employees
 	position: relative
-	padding: 50px 0 0
+	padding: 88px 0 0
 	&__container
 		max-width: 1420px
 	&__slider
 		display: none
-		padding: 0 51px
-		margin: 20px 0 0
+		padding: 0 35px 0 65px
+		margin: 27px 0 0
 		&.slick-initialized
 			display: block
 		.slider-btn
+			top: 45%
 			margin-top: -25px
+			&_next
+				right: -15px
+			&_prev
+				left: 15px
 	&__person
 		font-size: 0
 		cursor: default
@@ -27,8 +32,8 @@
 				z-index: 2
 		&-speech
 			position: absolute
-			top: 20%
-			left: 20%
+			top: 22%
+			left: 17%
 			z-index: 1
 			max-width: 270px
 			padding: 28px 30px 22px 30px
@@ -42,7 +47,7 @@
 			display: inline-block
 			vertical-align: middle
 			width: percentage(505 / 1170)
-			padding: 0 30px
+			padding: 0 28px 0 20px
 			font-size: 18px
 			strong
 				+f('mus-700')
@@ -52,10 +57,13 @@
 		&-pos
 			+f('mus-700', 18, 28)
 		&-edu
+			margin-top: 15px
 			font-size: 18px
-			line-height: 35px
+			line-height: 20px
+			& ~ p
+				margin-top: 12px
 	&__ask-btn
-		margin-top: 20px
+		margin-top: 25px
 		padding: 0 53px
 	&__bg
 		+coverdiv

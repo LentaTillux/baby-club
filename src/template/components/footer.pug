@@ -1,0 +1,28 @@
+//begin footer
++b.FOOTER.footer
+	+e.container.container
+		+b.logo.header__logo
+			+e.A.link(href='#!')
+				+e.IMG.img(src='static/img/logo.svg' alt='Бэби клуб')
+			+e.P.descr Бережное развитие интеллекта
+
+		+e.info
+			+b.DIV.nav._footer
+				+e.UL.list
+					-
+						navList = [
+						'О клубе',
+						'Программы занятий',
+						'Гарантии',
+						'Отзывы',
+						'Контакты'
+						]
+					for navLink, index in navList
+						-activeIndex = 1
+						li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink
+
+			+e.dev
+				+e.SPAN Создано в студии
+				+e.A.dev-link(href='http://akticom.ru' target='_blank')
+					+b.icon-dev
+					+e.SPAN “Актиком”

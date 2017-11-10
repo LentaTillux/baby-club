@@ -1,4 +1,4 @@
-import { css } from '../modules/dev/helpers';
+import {css} from '../modules/dev/helpers';
 
 export function initContactBlock() {
 
@@ -6,43 +6,88 @@ export function initContactBlock() {
   if (!$contactBlock.length) return;
 
   ymaps.ready(init);
-  chooseBranch();
   showInfo();
+  chooseBranch();
 
   function init() {
     const contactMapMoscow = new ymaps.Map('contact-map-moscow', {
         center: [55.75366848567328, 37.621676554687504],
-        zoom: 12,
+        zoom: 10,
         controls: []
       }),
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        `<div class="contact__map-icon">
-             <img src="static/img/icons/map-icon.svg"/>
-        </div>`
-      ),
-      yellowCollection = new ymaps.GeoObjectCollection(null, {
-        iconLayout: 'default#image',
-        iconImageHref: 'static/img/icons/map-icon.svg'
-      }),
-      blueCollection = new ymaps.GeoObjectCollection(null, {
-        iconLayout: 'default#image',
-        iconImageHref: 'static/img/icons/map-icon.svg'
-      }),
-      yellowCoords = [[55.814025145176245, 37.64934758465566], [55.81, 37.75]],
-      blueCoords = [[55.814481568918886, 37.56202049999994], [55.81, 37.65]];
+      objectManager = new ymaps.ObjectManager({
+        clusterize: false
+        // gridSize: 32,
+      });
 
-    for (let i = 0, l = yellowCoords.length; i < l; i++) {
-      yellowCollection.add(new ymaps.Placemark(yellowCoords[i]));
+    contactMapMoscow.geoObjects.add(objectManager);
+
+    $.ajax({
+      url: 'static/js/mapMoscow.json'
+    }).done(function(data) {
+      objectManager.add(data);
+    });
+
+    showClubBranch();
+
+    function showClubBranch() {
+      const $branchList = $('.js-branch-list');
+      const $branchBtn = $branchList.children();
+
+      $branchBtn.on('click', function (e) {
+        e.preventDefault();
+        const $that = $(this);
+        const $branchNumber = $that.index() + 1;
+
+        switch ($branchNumber) {
+          case 1:
+            objectManager.setFilter('properties.branchNumber == "1"');
+            break;
+          case 2:
+            objectManager.setFilter('properties.branchNumber == "2"');
+            break;
+          case 3:
+            objectManager.setFilter('properties.branchNumber == "3"');
+            break;
+          case 4:
+            objectManager.setFilter('properties.branchNumber == "4"');
+            break;
+          case 5:
+            objectManager.setFilter('properties.branchNumber == "5"');
+            break;
+          case 6:
+            objectManager.setFilter('properties.branchNumber == "6"');
+            break;
+          case 7:
+            objectManager.setFilter('properties.branchNumber == "7"');
+            break;
+          case 8:
+            objectManager.setFilter('properties.branchNumber == "8"');
+            break;
+          case 9:
+            objectManager.setFilter('properties.branchNumber == "9"');
+            break;
+          case 10:
+            objectManager.setFilter('properties.branchNumber == "10"');
+            break;
+          case 11:
+            objectManager.setFilter('properties.branchNumber == "11"');
+            break;
+          case 12:
+            objectManager.setFilter('properties.branchNumber == "12"');
+            break;
+          case 13:
+            objectManager.setFilter('properties.branchNumber == "13"');
+            break;
+          case 14:
+            objectManager.setFilter('properties.branchNumber == "14"');
+            break;
+          default:
+            objectManager.setFilter('properties.branchNumber == " "');
+        }
+
+      });
     }
-    for (let i = 0, l = blueCoords.length; i < l; i++) {
-      blueCollection.add(new ymaps.Placemark(blueCoords[i]));
-    }
-
-    contactMapMoscow.geoObjects.add(yellowCollection).add(blueCollection);
-
-    // [55.814025145176245,37.64934758465566] _6
-    // [55.814481568918886,37.56202049999994] _9
-
 
     // const $streetsList = $('.js-contact-streets');
     // const $streetLink = $streetsList.find('a');

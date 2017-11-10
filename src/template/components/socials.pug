@@ -1,0 +1,21 @@
+if socials ? socials : socials = []
+if socialsList ? socialsList : socialsList = ['vk', 'facebook', 'instagram']
+
+//begin socials
++b.socials(class= socials.classMod ? socials.classMod : '')
+	-
+		socialsList = [{
+		icon: 'vk',
+		iconMod: 'vk'
+		}, {
+		icon: 'facebook',
+		iconMod: 'fb'
+		}, {
+		icon: 'instagram',
+		iconMod: 'inst'
+		}]
+	mixin socItem(item)
+		+e.A.link(class=`_${item.iconMod}` href='#!' target='_blank')
+			+i(item.icon)
+	each item in socialsList
+		+socItem(item)

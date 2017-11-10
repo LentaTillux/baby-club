@@ -1,25 +1,21 @@
-import { TweenMax } from 'gsap';
+import { TweenMax, CSSPlugin } from 'gsap';
 import { css } from '../modules/dev/helpers';
 
 export default class CTabs {
   constructor(el) {
-    this.$tabNav = el.find('.c-tabs__tabs-nav').find('.c-tabs__tabs-el');
-    this.$tabItemContainer = el.find('.c-tabs__tabs-for');
-    this.$tabItem = this.$tabItemContainer.find('.c-tabs__tab');
-    this.$infoBlock = el.find('.c-tabs__more-info');
-    this.$closeBtn = el.find('.c-tabs__close');
+    this.$tabNav = el.find('.js-branch-list').find('.contact__metro-branch');
+    this.$tabItemContainer = el.find('.js-contact-info');
+    this.$tabItem = this.$tabItemContainer.find('.contact__info-tab');
   }
 
   init() {
     this.bindEvents();
-    this.openMoreInfo();
-    this.closeMoreInfo();
   }
 
   bindEvents() {
     if (!this.$tabNav.hasClass('js-disabled') && this.getActiveIndex() !== 0) {
       this.$tabItem.hide()
-        .eq(this.getActiveIndex()).show().css('display', 'flex');
+        .eq(this.getActiveIndex()).show();
     }
 
     this.$tabNav.on('click', (ev) => {
@@ -27,14 +23,13 @@ export default class CTabs {
       const targetIndex = $(ev.currentTarget).index();
 
       this.changeTab(currentIndex, targetIndex);
-      this.$infoBlock.slideUp();
     });
   }
 
   getActiveIndex() {
     let activeIndex = 0;
 
-    this.$tabNav.each(function () {
+    this.$tabNav.each(function() {
       if ($(this).hasClass(css.active)) {
         activeIndex = $(this).index();
       }
@@ -45,7 +40,7 @@ export default class CTabs {
 
   changeTab(currentIndex, nextIndex) {
     const _this = this;
-    const speed = 0.3;
+    const speed = 0.15;
     const $currentTabNav = this.$tabNav.eq(currentIndex);
     const $nextTabNav = this.$tabNav.eq(nextIndex);
     const $currentTab = this.$tabItem.eq(currentIndex);
@@ -55,58 +50,31 @@ export default class CTabs {
     $nextTabNav.removeClass(css.disabled).addClass(css.active);
     TweenMax.to($currentTab, speed, {
       autoAlpha: 0,
-      y: 15,
+      y: 0,
       clearProps: 'transform',
       onComplete() {
         const currentHeight = _this.$tabItemContainer.outerHeight();
         TweenMax.set(_this.$tabItemContainer, { height: currentHeight });
         $(this.target).hide();
         TweenMax.set($nextTab, { autoAlpha: 1 });
-        $nextTab.show().css('display', 'flex');
-        TweenMax.staggerFromTo($nextTab.children().children(), speed, {
+        $nextTab.show();
+        TweenMax.staggerFromTo($nextTab.children(), speed, {
           autoAlpha: 0,
-          y: -50
+          y: -10
         }, {
           autoAlpha: 1,
           y: 0
         }, speed / 2);
+        TweenMax.set(_this.$tabItemContainer, { height: 'auto' });
         TweenMax.from(_this.$tabItemContainer, speed, { height: currentHeight });
       }
     });
-
-  }
-
-  openMoreInfo() {
-    const $moreLink = $('.js-career-more');
-
-    $moreLink.on('click', function (ev) {
-      ev.preventDefault();
-
-      const $that = $(this);
-      const $tabs = $('.c-tabs');
-      const $infoBlock = $that.next('.c-tabs__more-info');
-
-      $tabs.addClass(css.active);
-      $infoBlock.slideDown();
-    });
-  }
-
-  closeMoreInfo () {
-    const $tabs = $('.c-tabs');
-    const infoBlock = this.$infoBlock;
-    const $overlay = $tabs.find('.c-tabs__overlay');
-
-    this.$closeBtn.on('click', function (e) {
-      e.preventDefault();
-
-      $tabs.removeClass(css.active);
-      infoBlock.fadeOut();
-    });
-
-    $overlay.on('click', function () {
-      $tabs.removeClass(css.active);
-      infoBlock.fadeOut();
-    });
-
   }
 }
+
+/** tabs init */
+const $tabs = $('.contact__nav');
+$tabs.each((index, el) => {
+  const tab = new CTabs($(el));
+  tab.init();
+});

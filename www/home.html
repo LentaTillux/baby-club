@@ -32,6 +32,13 @@
             }
           </style>
         </defs>
+        <symbol id="icon-facebook" viewBox="0 0 155.139 155.139">
+          <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42a3.908 3.908 0 0 0-1.417.923c-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372a3.908 3.908 0 0 0 1.417-.923c.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942a3.908 3.908 0 0 0-.923-1.417A3.886 3.886 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28a2.49 2.49 0 0 1-.92-.6c-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452a4.108 4.108 0 1 0 0 8.215 4.108 4.108 0 0 0 0-8.215zm0 6.775a2.667 2.667 0 1 1 0-5.334 2.667 2.667 0 0 1 0 5.334zm5.23-6.937a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z"
+          />
+        </symbol>
         <symbol id="icon-list-circle" viewBox="0 0 25 25">
           <title>list-circle</title>
           <g id="&#x421;&#x43B;&#x43E;&#x439;_2" data-name="&#x421;&#x43B;&#x43E;&#x439; 2">
@@ -63,6 +70,10 @@
               <path class="cls-1" d="M12.3 0L9.6 12.75h5.6L19.65 0H12.3z" />
             </g>
           </g>
+        </symbol>
+        <symbol id="icon-vk" viewBox="0 0 16 16">
+          <path d="M7.828 12.526h.957s.288-.032.436-.19c.14-.147.14-.42.14-.42s-.02-1.284.58-1.473c.59-.187 1.34 1.24 2.14 1.788.61.42 1.07.33 1.07.33l2.14-.03s1.12-.07.59-.95c-.04-.07-.3-.65-1.58-1.84-1.34-1.24-1.16-1.04.45-3.19.98-1.31 1.38-2.11 1.25-2.45-.11-.32-.84-.24-.84-.24l-2.4.02s-.18-.02-.31.06-.21.26-.21.26-.38 1.02-.89 1.88C10.27 7.9 9.84 8 9.67 7.88c-.403-.26-.3-1.053-.3-1.62 0-1.76.27-2.5-.52-2.69-.26-.06-.454-.1-1.123-.11-.86-.01-1.585.006-1.996.207-.27.135-.48.434-.36.45.16.02.52.098.71.358.25.337.24 1.09.24 1.09s.14 2.077-.33 2.335c-.33.174-.77-.187-1.73-1.837-.49-.84-.86-1.78-.86-1.78s-.07-.17-.2-.27c-.15-.11-.37-.15-.37-.15l-2.29.02s-.34.01-.46.16c-.11.13-.01.41-.01.41s1.79 4.19 3.82 6.3c1.86 1.935 3.97 1.81 3.97 1.81z"
+          />
         </symbol>
       </svg>
     </div>
@@ -98,7 +109,7 @@
             <button class="header__contacts-btn btn btn_green btn_sm" type="button">Обратный звонок</button>
           </div>
           <nav class="nav nav_header js-nav">
-            <ul class="nav__list container">
+            <ul class="nav__list">
               <li class="is-active">
                 <a href="#!">О клубе</a>
               </li>
@@ -146,35 +157,51 @@
     <section class="benefits">
       <div class="benefits__container container">
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-angel"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-angel"></div>
+          </div>
           <p>Возрастные группы от 8 месяцев до 7 лет</p>
         </div>
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-squirrel"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-squirrel"></div>
+          </div>
           <p>Бережно развиваем интеллект</p>
         </div>
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-worm"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-worm"></div>
+          </div>
           <p>Максимум 8 детей в каждой группе</p>
         </div>
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-reptile"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-reptile"></div>
+          </div>
           <p>Готовимся к взрослой жизни, садику или школе</p>
         </div>
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-dynamite"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-dynamite"></div>
+          </div>
           <p>Обучаемся, играем и отдыхаем вместе</p>
         </div>
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-tree"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-tree"></div>
+          </div>
           <p>Развиваем навыки общения и дружбы</p>
         </div>
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-giraffe"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-giraffe"></div>
+          </div>
           <p>Познаём окружающий мир и себя</p>
         </div>
         <div class="benefits__item">
-          <div class="benefits__item-icon icon-lock"></div>
+          <div class="benefits__item-pic">
+            <div class="benefits__item-icon icon-lock"></div>
+          </div>
           <p>Ходим в кружки и секции, развиваем таланты</p>
         </div>
       </div>
@@ -291,7 +318,7 @@
               </div>
             </div>
           </div>
-          <button class="lesson__enroll-btn btn btn_green" type="button">Записаться на пробное занятие</button>
+          <button class="lesson__enroll-btn btn btn_green btn_lg" type="button">Записаться на пробное занятие</button>
         </div>
       </div>
     </section>
@@ -604,134 +631,46 @@
       </div>
     </section>
     <!--include ../components/testimonials-->
-    <!--begin contact-->
-    <section class="contact">
-      <div class="contact__container container">
-        <h2 class="contact__title title">ПРИХОДИТЕ В ГОСТИ, ЧТОБЫ УВИДЕТЬ ВСЁ СВОИМИ ГЛАЗАМИ</h2>
-        <div class="contact__inner">
-          <div class="contact__nav">
-            <div class="contact__city">
-              <span class="contact__city-current">г. Москва</span>
-              <a class="contact__city-change" href="#!">Сменить город</a>
-            </div>
-            <div class="contact__metro">
-              <p class="contact__metro-text">Удобная для Вас ветка Метро:</p>
-              <ul class="contact__metro-list js-branch-list">
-                <li class="contact__metro-branch contact__metro-branch_1">1</li>
-                <li class="contact__metro-branch contact__metro-branch_2">2</li>
-                <li class="contact__metro-branch contact__metro-branch_3">3</li>
-                <li class="contact__metro-branch contact__metro-branch_4">4</li>
-                <li class="contact__metro-branch contact__metro-branch_5">5</li>
-                <li class="contact__metro-branch contact__metro-branch_6">6</li>
-                <li class="contact__metro-branch contact__metro-branch_7">7</li>
-                <li class="contact__metro-branch contact__metro-branch_8">8</li>
-                <li class="contact__metro-branch contact__metro-branch_9">9</li>
-                <li class="contact__metro-branch contact__metro-branch_10">10</li>
-                <li class="contact__metro-branch contact__metro-branch_11">11</li>
-                <li class="contact__metro-branch contact__metro-branch_12">12</li>
-                <li class="contact__metro-branch contact__metro-branch_13">13</li>
-                <li class="contact__metro-branch contact__metro-branch_14">14</li>
-              </ul>
-            </div>
-            <div class="contact__info js-contact-info">
-              <div class="contact__info-item">
-                <a class="contact__info-title is-active" href="#!">в Бескудниково</a>
-                <div class="contact__info-details">
-                  <div class="contact__info-details-field">
-                    <p>Бескудниковский прд, д. 4, корп. 2.</p>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="tel:+79154742323">+7 915 4742323</a>
-                  </div>
-                  <div class="contact__info-actions">
-                    <a href="#!">На карте</a>
-                    <a href="#!">На страницу клуба</a>
-                  </div>
-                </div>
-              </div>
-              <div class="contact__info-item">
-                <a class="contact__info-title" href="#!">на Алексеевской</a>
-                <div class="contact__info-details">
-                  <div class="contact__info-details-field">
-                    <p>Бескудниковский прд, д. 4, корп. 2.</p>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="tel:+79154742323">+7 915 4742323</a>
-                  </div>
-                  <div class="contact__info-actions">
-                    <a href="#!">На карте</a>
-                    <a href="#!">На страницу клуба</a>
-                  </div>
-                </div>
-              </div>
-              <div class="contact__info-item">
-                <a class="contact__info-title" href="#!">на Аэропорте</a>
-                <div class="contact__info-details">
-                  <div class="contact__info-details-field">
-                    <p>Бескудниковский прд, д. 4, корп. 2.</p>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="tel:+79154742323">+7 915 4742323</a>
-                  </div>
-                  <div class="contact__info-actions">
-                    <a href="#!">На карте</a>
-                    <a href="#!">На страницу клуба</a>
-                  </div>
-                </div>
-              </div>
-              <div class="contact__info-item">
-                <a class="contact__info-title" href="#!">на Астрадамской</a>
-                <div class="contact__info-details">
-                  <div class="contact__info-details-field">
-                    <p>Бескудниковский прд, д. 4, корп. 2.</p>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="tel:+79154742323">+7 915 4742323</a>
-                  </div>
-                  <div class="contact__info-actions">
-                    <a href="#!">На карте</a>
-                    <a href="#!">На страницу клуба</a>
-                  </div>
-                </div>
-              </div>
-              <div class="contact__info-item">
-                <a class="contact__info-title" href="#!">на Беломорской</a>
-                <div class="contact__info-details">
-                  <div class="contact__info-details-field">
-                    <p>Бескудниковский прд, д. 4, корп. 2.</p>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="mailto:msk.beskudnik@babyclub.ru">msk.beskudnik@babyclub.ru</a>
-                  </div>
-                  <div class="contact__info-details-field">
-                    <a href="tel:+79154742323">+7 915 4742323</a>
-                  </div>
-                  <div class="contact__info-actions">
-                    <a href="#!">На карте</a>
-                    <a href="#!">На страницу клуба</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <!--include ../components/contact-->
+    <!--begin footer-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="logo header__logo">
+          <a class="logo__link" href="#!">
+            <img class="logo__img" src="static/img/logo.svg" alt="Бэби клуб" title="" />
+          </a>
+          <p class="logo__descr">Бережное развитие интеллекта</p>
+        </div>
+        <div class="footer__info">
+          <div class="nav nav_footer">
+            <ul class="nav__list">
+              <li class="is-active">
+                <a href="#!">О клубе</a>
+              </li>
+              <li>
+                <a href="#!">Программы занятий</a>
+              </li>
+              <li>
+                <a href="#!">Гарантии</a>
+              </li>
+              <li>
+                <a href="#!">Отзывы</a>
+              </li>
+              <li>
+                <a href="#!">Контакты</a>
+              </li>
+            </ul>
           </div>
-          <div class="contact__map">
-            <div class="contact__map-body" id="contact-map-moscow"></div>
+          <div class="footer__dev">
+            <span>Создано в студии</span>
+            <a class="footer__dev-link" href="http://akticom.ru" target="_blank">
+              <span class="icon-dev"></span>
+              <span>“Актиком”</span>
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
     <!-- Scripts-->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="static/js/index.jquery.js"></script>

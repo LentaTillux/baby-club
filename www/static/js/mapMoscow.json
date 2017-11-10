@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.814025145176245,
+          37.64934758465566
+        ]
+      },
+      "properties": {
+        "branchNumber": "6",
+        "balloonContent": "ул. Маломосковская, д. 21, к. 2."
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "static/img/icons/map-icon.svg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.814481568918886,
+          37.56202049999994
+        ]
+      },
+      "properties": {
+        "branchNumber": "9",
+        "balloonContent": "ул. Астрадамская, д. 15."
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "static/img/icons/map-icon.svg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.80885206893429,
+          37.52147050000001
+        ]
+      },
+      "properties": {
+        "branchNumber": "2",
+        "balloonContent": "ул. Часовая, д. 19, корп. 3."
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "static/img/icons/map-icon.svg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.86515156887017,
+          37.47208149999991
+        ]
+      },
+      "properties": {
+        "branchNumber": "2",
+        "balloonContent": "ул. Беломорская, д. 11, корп. 1, ЖК «Белый парк 2»."
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "static/img/icons/map-icon.svg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.87602106886827,
+          37.55469949999995
+        ]
+      },
+      "properties": {
+        "branchNumber": "10",
+        "balloonContent": "Бескудниковский пр-д, д. 4, корп. 2."
+      },
+      "options": {
+        "iconLayout": "default#image",
+        "iconImageHref": "static/img/icons/map-icon.svg"
+      }
+    }
+  ]
+}

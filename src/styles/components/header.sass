@@ -1,17 +1,17 @@
 .header
-	padding: 40px 0 60px
+	padding: 46px 0 55px
 	&__container
 		display: flex
 		justify-content: space-between
 	&__logo
-		width: percentage(350 /1110)
+		width: percentage(358 /1110)
 	&__info
-		width: percentage(730 /1110)
+		width: 66.2%
 	&__contacts
 		display: flex
 		justify-content: space-between
 		align-items: center
-		padding-bottom: 25px
+		padding-bottom: 15px
 		&-block
 			a
 				+f('mus-300', 15, 15)
@@ -21,7 +21,7 @@
 					border-bottom-color: $purple-dark
 			&_city
 				position: relative
-				padding-left: 15px
+				padding-left: 22px
 				.icon-loc
 					position: absolute
 					top: 0
@@ -33,22 +33,27 @@
 			display: block
 			+f('mus-700', 18, 22)
 		&-tel
+			margin-top: -12px
 			font-size: 26px
 			span
 				+f('mus-900')
-		
+		&-btn
+			margin-top: -16px
+
 .logo
-	text-align: center
+	text-align: left
 	img
 		display: block
 		width: 100%
 	&__link
-	
+		display: block
 	&__descr
+		padding-left: 20px
 		font-size: 20px
+		line-height: 1
 	
 .nav
-	background: #fff
+	$parent: &
 	+sm
 		padding: 13px 0
 	+xs
@@ -79,6 +84,8 @@
 	&__list
 		display: flex
 		justify-content: space-between
+		#{$parent}_header &
+			padding-left: 24px
 		+xs
 			flex-direction: column
 			justify-content: center

@@ -1,14 +1,17 @@
 .lesson
-	padding: 70px 0 0
+	padding: 106px 0 0
 	&__benefits
-		margin: 0 -15px
+		margin: 0 -15px 75px
 		font-size: 0
+		$parent: &
 		&-item
 			display: inline-block
 			vertical-align: top
 			width: 25%
 			padding: 0 15px
 			text-align: center
+			&:nth-child(4) #{$parent}-text
+				padding: 55px 10px 34px
 		&-icon
 			display: inline-block
 			width: 100px
@@ -24,51 +27,59 @@
 			&_green
 				background-color: #25a84a
 				&::after
+					background-position: -129px -412px
 					width: 51px
 					height: 41px
-					background-position: -153px -81px
 			&_yellow
 				background-color: #f9ab1d
 				&::after
+					position: relative
+					top: 4px
+					background-position: -129px -356px
 					width: 56px
 					height: 52px
-					background-position: -119px -813px
 			&_pink
 				background-color: #ec008c
 				&::after
+					background-position: -151px -95px
 					width: 46px
 					height: 52px
-					background-position: -118px -939px
 			&_blue
 				background-color: #00aeef
 				&::after
+					position: relative
+					top: -4px
+					background-position: -132px -299px
 					width: 64px
 					height: 53px
-					background-position: -128px -532px
 		&-text
 			margin-top: -45px
-			padding: 50px 15px 38px
+			padding: 55px 20px 34px
 			border-radius: 40px
-			//background-color: gray
 			background-color: #f4f4f4
 			+f('mus-700', 17)
 			
 	&__study
 		text-align: center
 		&-list
-			margin-top: 30px
+			margin: 40px 0 0
 			counter-reset: studyCount
-			+clr
+			font-size: 0
 		&-item
-			float: left
+			display: inline-block
+			vertical-align: middle
 			width: 33.33333%
-			padding: 0 20px 40px 0
+			padding: 0 35px 40px 0
 			text-align: left
+			&:nth-child(3n)
+				padding: 0 25px 40px 10px
 		&-text
 			position: relative
 			padding-left: 30px
 			font-size: 18px
 			line-height: 22px
+			p
+				padding: 0 15px
 			&_green::before
 				color: #25a84a
 			&_pink::before
@@ -83,8 +94,11 @@
 				color: #ea242b
 			&::before
 				position: absolute
-				top: 0
-				left: 0
+				top: 15px
+				left: 7px
 				counter-increment: studyCount
 				content: counter(studyCount)
 				+f('mus-900', 40)
+	&__enroll-btn
+		position: relative
+		z-index: 10

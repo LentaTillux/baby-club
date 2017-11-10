@@ -32,7 +32,8 @@ if benefits ? benefits : benefits = []
 
 		mixin benefitsItem(item)
 			+e.item
-				+e.item-icon(class= `icon-${item.icon}`)
+				+e.item-pic
+					+e.item-icon(class= `icon-${item.icon}`)
 				+e.P= item.text
 
 		each item in benefitsList

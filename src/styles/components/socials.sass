@@ -1,0 +1,40 @@
+.socials
+	display: flex
+	align-items: center
+	$parent: &
+	&__link
+		width: 47px
+		height: 47px
+		box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2)
+		border: 2px solid #ffffff
+		border-radius: 50%
+		text-align: center
+		+vertical
+		+trs
+		&_vk
+			background-color: #82bfff
+			.no-touch &:hover
+				background: darken(#82bfff, 15)
+		&_fb
+			background-color: #4c63a6
+			.no-touch &:hover
+				background: darken(#4c63a6, 10)
+		&_inst
+			background-color: #c39bd3
+			.no-touch &:hover
+				background: darken(#c39bd3, 15)
+		&:not(:first-child)
+			margin-left: 15px
+		.no-touch &:hover .icon
+			fill: $white
+		.icon
+			display: inline-block
+			vertical-align: middle
+			fill: $white
+			+trs
+		.icon-vk
+			font-size: 25px
+		.icon-facebook
+			font-size: 26px
+		.icon-instagram
+			font-size: 25px
