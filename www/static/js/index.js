@@ -3875,7 +3875,6 @@ function initContactBlock() {
     }),
         objectManager = new ymaps.ObjectManager({
       clusterize: false
-      // gridSize: 32,
     });
 
     contactMapMoscow.geoObjects.add(objectManager);
@@ -3946,21 +3945,17 @@ function initContactBlock() {
       });
     }
 
-    // const $streetsList = $('.js-contact-streets');
-    // const $streetLink = $streetsList.find('a');
-    //
-    // $streetLink.on('click', function (e) {
-    //   e.preventDefault();
-    //   const $that = $(this);
-    //   const $streetLinkCoord = $that.data('str-coords');
-    //   const $parent = $that.parent();
-    //
-    //   contactMap.panTo($streetLinkCoord, {
-    //     duration: 1000
-    //   });
-    //   $parent.siblings().removeClass(css.active);
-    //   $parent.addClass(css.active);
-    // });
+    var $clubLink = $('.js-club-link');
+
+    $clubLink.on('click', function (e) {
+      e.preventDefault();
+      var $that = $(this);
+      var $clubCoords = $that.data('club-coords');
+
+      contactMapMoscow.panTo($clubCoords, {
+        duration: 1000
+      });
+    });
   }
 
   function showInfo() {
