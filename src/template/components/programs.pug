@@ -72,7 +72,7 @@ if programs.title ? programs.title : programs.title = 'ПРОГРАММЫ, КО�
 							| руб. в месяц
 					+e.BUTTON.details-btn.btn._green._md(type='button' data-popup-target='programs-card-1') Подробнее
 
-					+b.popup(data-popup-id='programs-card-1', tabindex='-1', role='dialog')
+					+b.popup._programs(data-popup-id='programs-card-1', tabindex='-1', role='dialog')
 						+e.container
 							+e.close
 								+i('close')

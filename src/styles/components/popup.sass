@@ -13,10 +13,12 @@
 	text-align: center
 	font-size: 0
 	transform: translate3d(0, 0, 0)
-	background-color: rgba(45, 46, 67, 0.15)
+	background-color: rgba(45, 46, 67, 0.8)
 	transition: opacity .3s ease, transform .5s ease, visibility .5s
 	will-change: opacity, transform
 	$parent: &
+	&_programs
+		background-color: rgba(45, 46, 67, 0.15)
 	&:after
 		content: ''
 		display: inline-block
