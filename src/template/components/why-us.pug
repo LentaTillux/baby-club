@@ -21,14 +21,35 @@ if whyUs.title ? whyUs.title : whyUs.title = 'ПОЧЕМУ МАМЫ И ПАПЫ 
 				}, {
 				icon: 'carrot',
 				text: 'У нас установлено видеонаблюдение, чтобы вы могли видеть ребенка в любое время с компьютера или мобильного телефона'
+				}, {
+				hiddenClass: 'is-hidden',
+				icon: 'lock',
+				text: 'Бонусы и скидки для детей и их родителей за постоянное посещение'
+				}, {
+				hiddenClass: 'is-hidden',
+				icon: 'dynamite',
+				text: 'Отчет о процессе обучения, обратная связь и рекомендации от педагогов, врача и психолога'
+				}, {
+				hiddenClass: 'is-hidden',
+				icon: 'robot',
+				text: 'Обучаем родителей быть не только воспитателем но и наставником и другом своему ребенку, понимать его желания'
+				}, {
+				hiddenClass: 'is-hidden',
+				icon: 'anchor',
+				text: 'Проводим тренинги и вебинары на тему воспитания, взросления подготовки к детскому саду и школе'
+				}, {
+				hiddenClass: 'is-hidden',
+				icon: 'squirrel',
+				text: 'Обучаем родителей быть не только воспитателем но и наставником и другом своему ребенку, понимать его желания'
 				}]
 			mixin whyUsItem(item)
-				+e.item
+				+e.item(class= item.hiddenClass ? item.hiddenClass : '')
 					+e.item-icon
 						+b.DIV(class=`icon-${item.icon}`)
 					+e.item-text
 						+e.P= item.text
 			each item in whyUsList
 				+whyUsItem(item)
-		+e.A.all-btn.btn._green._lg(href='#!') Смотреть все гарантии
+		+e.A.all-btn.btn._green._lg.js-more-btn(href='#!')
+			+e.SPAN(data-default-text='Смотреть все гарантии' data-change-text='Свернуть') Смотреть все гарантии
 	+e.bg(style='background-image: url(static/img/bg/employees_bg.jpg)')

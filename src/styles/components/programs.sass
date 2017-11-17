@@ -56,3 +56,80 @@
 				margin: 0 4px
 				vertical-align: bottom
 				+f('mus-900', 22)
+				
+.programs-more
+	&__top
+		display: flex
+		align-items: center
+		margin-bottom: 10px
+	&__name
+		margin-left: 25px
+		text-align: left
+	&__photos
+		display: flex
+		justify-content: space-between
+		+xs
+			flex-direction: column
+		&-item
+			flex: 0 1 260px
+			+cover-img
+			overflow: hidden
+			border-radius: 10px
+			+sm
+				padding: 0 4px
+			+xs
+				padding: 0
+				flex: 0 1 auto
+				margin-bottom: 10px
+	&__title
+		margin-bottom: 8px
+		+f('mus-700', 14, 20)
+		color: #000
+		text-transform: uppercase
+	&__text
+		display: flex
+		margin: 25px 0 30px
+		+xs
+			flex-direction: column
+			margin: 10px 0 20px
+		&-col
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			text-align: left
+			&:nth-child(1)
+				width: 40%
+				padding-right: 40px
+				+xs
+					width: auto
+					padding-right: 0
+					margin-bottom: 20px
+			&:nth-child(2)
+				width: 60%
+				padding-right: 30px
+				+xs
+					width: auto
+					padding-right: 0
+		p
+			font-size: 15px
+			line-height: 22px
+			color: #5e5f78
+			&:not(:first-of-type)
+				margin-top: 10px
+	&__price
+		display: inline-flex
+		align-items: center
+		margin-top: 20px
+		+f('mus-700', 13)
+		color: #000
+		text-transform: uppercase
+		span
+			margin: 0 5px
+			+f('mus-900', 22)
+	&__enroll-btn
+		padding: 0 39px
+		font-size: 16px
+		+xs
+			height: auto
+			padding: 8px 10px
+			line-height: 1.4

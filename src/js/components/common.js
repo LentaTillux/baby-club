@@ -1,9 +1,11 @@
 import './noTouch';
 import objectFitImages from 'object-fit-images';
+import './popupInit';
 import { MobNav } from './mobNav';
 import { CTabs } from './contactBlockTabs';
 import { initSliders } from './initSliders';
 import { initContactBlock } from './initContactBlock';
+import { showMore } from './showMore';
 
 /**
  * Website's common scripts.
@@ -19,6 +21,7 @@ export class Common {
     objectFitImages();
     initSliders();
     initContactBlock();
+    showMore();
   }
 }
 

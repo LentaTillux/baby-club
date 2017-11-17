@@ -15,6 +15,7 @@
 	&__inner
 		margin: 40px 0 20px
 		font-size: 0
+		text-align: left
 		+sm
 			margin: 20px 0
 	&__title
@@ -38,15 +39,27 @@
 			padding-left: 18px
 			+sm
 				padding-left: 0
+		&.is-hidden
+			display: none
 		&-icon
 			display: inline-block
 			vertical-align: middle
 			width: 120px
+			text-align: center
 			+sm
 				transform: scale(0.7)
 			+xs
 				display: block
 				margin: 0 auto
+			.icon-robot
+				position: relative
+				left: -10px
+			.icon-lock
+				position: relative
+				left: -10px
+			.icon-lamp
+				position: relative
+				left: -20px
 			.icon-key
 				+sm
 					position: relative
@@ -74,12 +87,12 @@
 	&__bg
 		+coverdiv
 		z-index: -1
-		background-size: 120%
+		background-size: 160%
 		background-repeat: no-repeat
 		background-position: 50% 50%
 		+lg
-			background-size: 155%
-		+sm
 			background-size: 270%
+		+sm
+			background-size: 500%
 		+xs
-			background-size: 910%
+			background-size: 1900%

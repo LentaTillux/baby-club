@@ -9,7 +9,100 @@ if contact.title ? contact.title : contact.title = 'ПРИХОДИТЕ В ГОС
 			+e.nav
 				+e.city
 					+e.SPAN.city-current г. Москва
-					+e.A.city-change(href='#!') Сменить город
+					+e.A.city-change(href='#!' data-popup-target='change-city') Сменить город
+					+b.popup(data-popup-id='change-city', tabindex='-1', role='dialog')
+						+e.container
+							+e.close
+								+i('close')
+							+b.change-city
+								+e.top
+									+e.H5.title ВЫБЕРИТЕ ГОРОД
+									+e.INPUT.form-input.input(type='text' placeholder='Введите название города' name='' required)
+								+e.popular
+									+e.popular-title Популярные города:
+									+e.A(href='#!') Москва
+									+e.A(href='#!') Санкт-Питербург
+									+e.A(href='#!') Екатеринбург
+									+e.A(href='#!') Краснодар
+								+e.search
+									+e.UL.search-letters
+										+b.LI.is-active
+											+e.A(href='#!') А
+										+e.LI
+											+e.A(href='#!') Б
+										+e.LI
+											+e.A(href='#!') В
+										+e.LI
+											+e.A(href='#!') Г
+										+e.LI
+											+e.A(href='#!') Д
+										+e.LI
+											+e.A(href='#!') Е
+										+e.LI
+											+e.A(href='#!') Ж
+										+e.LI
+											+e.A(href='#!') З
+										+e.LI
+											+e.A(href='#!') И
+										+e.LI
+											+e.A(href='#!') Й
+										+e.LI
+											+e.A(href='#!') К
+										+e.LI
+											+e.A(href='#!') Л
+										+e.LI
+											+e.A(href='#!') М
+										+e.LI
+											+e.A(href='#!') Н
+										+e.LI
+											+e.A(href='#!') О
+										+e.LI
+											+e.A(href='#!') П
+										+e.LI
+											+e.A(href='#!') Р
+										+e.LI
+											+e.A(href='#!') С
+										+e.LI
+											+e.A(href='#!') Т
+										+e.LI
+											+e.A(href='#!') У
+										+e.LI
+											+e.A(href='#!') Ф
+										+e.LI
+											+e.A(href='#!') Х
+										+e.LI
+											+e.A(href='#!') Ч
+										+e.LI
+											+e.A(href='#!') Ш
+										+e.LI
+											+e.A(href='#!') Э
+										+e.LI
+											+e.A(href='#!') Ю
+										+e.LI
+											+e.A(href='#!') Я
+
+									+e.search-results
+										+e.UL
+											li: a(href='#!') Абакан
+											li: a(href='#!') Архангельск
+											li: a(href='#!') Анапа
+											li: a(href='#!') Астрахань
+
+											li: a(href='#!') Абакан
+											li: a(href='#!') Архангельск
+											li: a(href='#!') Анапа
+											li: a(href='#!') Астрахань
+
+											li: a(href='#!') Абакан
+											li: a(href='#!') Архангельск
+											li: a(href='#!') Анапа
+											li: a(href='#!') Астрахань
+
+											li: a(href='#!') Абакан
+											li: a(href='#!') Архангельск
+											li: a(href='#!') Анапа
+											li: a(href='#!') Астрахань
+
 				+e.metro
 					+e.P.metro-text Удобная для Вас ветка Метро:
 					+e.UL.metro-list.js-branch-list
