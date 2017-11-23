@@ -82,13 +82,19 @@
 				flex: 0 1 auto
 				margin-bottom: 10px
 	&__title
+		margin-bottom: 25px
+		+f('mus-700', 25, 22)
+		color: #000
+		+xs
+			font-size: 23px
+	&__sub-title
 		margin-bottom: 8px
 		+f('mus-700', 14, 20)
 		color: #000
 		text-transform: uppercase
 	&__text
 		display: flex
-		margin: 25px 0 30px
+		margin: 25px 0 40px
 		+xs
 			flex-direction: column
 			margin: 10px 0 20px
@@ -126,10 +132,32 @@
 		span
 			margin: 0 5px
 			+f('mus-900', 22)
+	&__form
+		&-in
+			display: flex
+			align-items: center
+			+sm
+				flex-wrap: wrap
+				justify-content: center
+			+xs
+				flex-direction: column
+				align-items: stretch
+		&-field
+			flex-basis: 33.33333%
+			+sm
+				flex: 0 0 260px
+			+xs
+				flex: 1 0 auto
+			&:not(:first-child)
+				margin-left: 30px
+				+xs
+					margin: 20px 0 0 0
+			&:nth-child(3)
+				+sm
+					margin: 20px 0 0 0
+		&-input
+			height: 45px
 	&__enroll-btn
-		padding: 0 39px
+		width: 100%
+		padding: 0 15px
 		font-size: 16px
-		+xs
-			height: auto
-			padding: 8px 10px
-			line-height: 1.4

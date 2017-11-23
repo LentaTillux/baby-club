@@ -31,17 +31,22 @@
 		visibility: visible
 	&__close
 		position: absolute
-		top: -17px
-		right: -17px
+		top: -25px
+		right: -25px
+		width: 51px
+		height: 51px
 		cursor: pointer
-		width: 37px
-		height: 37px
 		display: flex
 		align-items: center
 		justify-content: center
 		border-radius: 50%
 		background-color: #25a84a
 		+trs
+		+sm
+			top: -17px
+			right: -17px
+			width: 37px
+			height: 37px
 		+xs
 			top: -20px
 			right: 0
@@ -64,9 +69,12 @@
 			fill: #fff
 		.icon
 			fill: #fff
-			font-size: 18px
+			margin-top: 1px
+			font-size: 25px
 			z-index: 2
 			+trs
+			+sm
+				font-size: 17px
 	
 	&__container
 		display: inline-block
@@ -88,6 +96,16 @@
 			padding: 20px 15px 30px
 		+xs
 			padding: 20px 10px 25px
+		#{$parent}_call &
+			padding: 45px 30px 60px
+			+sm
+				padding: 35px 30px 40px
+			+xs
+				padding: 30px 10px
+		#{$parent}_ask &
+			padding: 45px 35px 60px
+			+xs
+				padding: 30px 10px 40px
 
 body.popup-opened
 	position: fixed

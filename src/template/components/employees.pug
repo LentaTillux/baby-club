@@ -11,9 +11,8 @@ if employees.title ? employees.title : employees.title = 'ВЫ МОЖЕТЕ ДО
 				+e.person
 					+e.person-look
 						+e.person-look-pic
-							+e.IMG(src='static/img/content/smirnova.png' alt='Смирнова Александра Андреевна')
-						+e.person-speech
-							+e.P Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.
+							+e.DIV.person-look-img(style='background-image: url(static/img/content/teach-img.jpg)')
+
 					+e.person-text
 						+e.H5.person-name Смирнова Александра Андреевна
 						+e.P.person-pos Педагог младших групп, психолог
@@ -31,6 +30,9 @@ if employees.title ? employees.title : employees.title = 'ВЫ МОЖЕТЕ ДО
 							= ' '
 							| в 2016 году
 
-						+e.BUTTON.ask-btn.btn._green(type='button') Задать вопрос педагогу
+						+e.person-speech
+							+e.P Дети это моё призвание! Я педагог в третьем поколении и мама троих детей.
+
+						+e.BUTTON.ask-btn.btn._green(data-popup-target='askPopup' type='button') Задать вопрос педагогу
 				-i++
 	+e.bg(style='background-image: url(static/img/bg/employees_bg.jpg)')

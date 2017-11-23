@@ -26,9 +26,9 @@ block main
 
 		include ../components/testimonials
 
-		include ../components/contact
+		//include ../components/contact
 
-		// popup change city
+		// begin pop-ups
 		+b.popup(data-popup-id='change-city', tabindex='-1', role='dialog')
 			+e.container
 				+e.close
@@ -121,3 +121,35 @@ block main
 								li: a(href='#!') Архангельск
 								li: a(href='#!') Анапа
 								li: a(href='#!') Астрахань
+
+		+b.popup._call(data-popup-id='callPopup', tabindex='-1', role='dialog')
+			+e.container
+				+e.close
+					+i('close')
+				+b.FORM.call-form(action='#!' method='POST')
+					+e.H4.title Заказать звонок
+					+e.inner
+						+e.field
+							+e.INPUT.form-input.input._sm(type='text' placeholder='Ваше имя*' name='' required)
+						+e.field
+							+e.INPUT.form-input.input._sm(type='text' placeholder='Ваш телефон' name='' required)
+						+e.field
+							+e.INPUT.submit-btn.btn._green._sm(type='submit' value='ЗАДАТЬ ВОПРОС')
+
+		+b.popup._ask(data-popup-id='askPopup', tabindex='-1', role='dialog')
+			+e.container
+				+e.close
+					+i('close')
+				+b.FORM.ask-form(action='#!' method='POST')
+					+e.H4.title Задать вопрос педагогу
+					+e.inner
+						+e.field
+							+e.INPUT.form-input.input._sm(type='text' placeholder='Ваше имя*' name='' required)
+						+e.field
+							+e.INPUT.form-input.input._sm(type='text' placeholder='Ваш телефон (необязательно)' name='')
+						+e.field
+							+e.INPUT.form-input.input._sm(type='text' placeholder='Ваш e-mail*' name='' required)
+					+e.message
+						+b.TEXTAREA.textarea(placeholder='Напишите ваш вопрос')
+
+					+e.INPUT.submit-btn.btn._green._sm(type='submit' value='ЗАДАТЬ ВОПРОС')
