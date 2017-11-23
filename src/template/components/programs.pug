@@ -2,7 +2,7 @@ if programs ? programs : programs = []
 if programs.title ? programs.title : programs.title = 'ПРОГРАММЫ, КОТОРЫЕ РАСКРОЮТ ВАШЕГО РЕБЕНКА'
 
 //begin programs
-+b.SECTION.programs(class= programs.classMod ? programs.classMod : '')
++b.SECTION.programs(id='programs' class= programs.classMod ? programs.classMod : '')
 	+e.container.container
 		+e.H2.title.title= programs.title
 		+e.list

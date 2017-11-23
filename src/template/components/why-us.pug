@@ -2,7 +2,7 @@ if whyUs ? whyUs : whyUs = []
 if whyUs.title ? whyUs.title : whyUs.title = 'ПОЧЕМУ МАМЫ И ПАПЫ 4 567 ДЕТЕЙ ВЫБИРАЮТ'
 
 //begin whyUs
-+b.SECTION.why-us(class= whyUs.classMod ? whyUs.classMod : '')
++b.SECTION.why-us(id='whyUs' class= whyUs.classMod ? whyUs.classMod : '')
 	+e.container.container
 		+e.H2.title.title= whyUs.title
 		+e.A.logo(href='#!')

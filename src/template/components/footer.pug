@@ -7,19 +7,13 @@
 			+e.P.descr Бережное развитие интеллекта
 
 		+e.info
-			+b.DIV.nav._footer
+			+b.DIV.nav._footer.js-nav
 				+e.UL.list
-					-
-						navList = [
-						'О клубе',
-						'Программы занятий',
-						'Гарантии',
-						'Отзывы',
-						'Контакты'
-						]
-					for navLink, index in navList
-						-activeIndex = 1
-						li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink
+					li: a(href='#benefits') О клубе
+					li: a(href='#programs') Программы занятий
+					li: a(href='#whyUs') Гарантии
+					li: a(href='#testimonials') Отзывы
+					li: a(href='#contact') Контакты
 
 			+e.dev
 				+e.SPAN Создано в студии

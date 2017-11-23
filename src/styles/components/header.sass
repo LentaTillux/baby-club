@@ -1,18 +1,47 @@
 .header
-	padding: 46px 0 55px
+	$parent: &
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 1001
+	padding: 44px 0 49px
+	background: #fff
+	transition: padding .5s ease, box-shadow .5s ease
 	+md
 		padding: 35px 0
 	+sm
 		padding: 30px 0 20px
 	+xs
 		padding: 20px 0
+	&.is-fixed
+		padding: 10px 0
+		box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.2)
+		.header__logo
+			width: 20%
+		.header__logo img
+			width: 200px
+		.logo__descr
+			font-size: 14px
+		.header__contacts
+			transform: translateY(30px)
+		.header__contacts-block
+			transform: translateY(-200%)
+		.header__contacts-tel
+			transform: translate(30px, 0)
+			font-size: 16px
+		.nav_header
+			width: 570px
+			transform: translate(-160px, -30px)
+		.nav__list a
+			font-size: 12px
 	&__container
 		display: flex
 		justify-content: space-between
-		+xs
-			align-items: center
+		align-items: center
 	&__logo
 		width: percentage(358 /1110)
+		transition: width .3s ease
 		+sm
 			width: 30%
 		+xs
@@ -30,11 +59,13 @@
 		justify-content: space-between
 		align-items: center
 		padding-bottom: 15px
+		transition: transform .3s ease
 		+sm
 			padding-left: 15px
 		+xs
 			display: none
 		&-block
+			transition: transform .3s ease
 			a
 				+f('mus-300', 15, 15)
 				border-bottom: 1px solid rgba($purple-dark, .65)
@@ -59,6 +90,7 @@
 		&-tel
 			margin-top: -12px
 			font-size: 26px
+			transition: font-size .3s ease, transform .3s ease
 			+md
 				margin-top: 0
 				font-size: 18px
@@ -79,16 +111,19 @@
 			z-index: 100
 
 .logo
-	text-align: left
+	text-align: center
 	img
-		display: block
+		display: inline-block
 		width: 100%
+		transition: width .3s ease
+		
 	&__link
 		display: block
 	&__descr
-		padding-left: 20px
 		font-size: 20px
 		line-height: 1
+		transition: font-size .3s ease
+		
 		+md
 			padding-left: 0
 			text-align: center
@@ -127,7 +162,7 @@
 		display: flex
 		justify-content: space-between
 		#{$parent}_header &
-			padding-left: 24px
+			padding-left: 20px
 			+sm
 				padding-left: 10px
 			+xs
@@ -143,12 +178,18 @@
 				text-align: center
 			&:last-child
 				padding-right: 0
+			&.is-active a
+				background: #c238eb
+			#{$parent}_footer &.is-active a
+				background: transparent
 		a
+			padding: 5px 15px
 			color: $black
 			+f('mus-900', 15, 22)
 			text-transform: uppercase
 			border-bottom: 1px solid rgba($black, .5)
-			+trs
+			border-radius: 15px
+			transition: background .1s ease
 			+sm
 				font-size: 13px
 			+xs
@@ -163,6 +204,8 @@
 		margin: 0 10px
 		+xs
 			display: block
+	&_header
+		transition: transform .5s ease
 	&_footer
 		+sm
 			display: none!important

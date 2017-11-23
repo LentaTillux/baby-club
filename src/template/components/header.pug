@@ -1,5 +1,5 @@
 //begin header
-+b.HEADER.header
++b.HEADER.header.js-header
 	+e.container.container
 		+b.logo.header__logo
 			+e.A.link(href='#!')
@@ -25,17 +25,11 @@
 
 			+b.NAV.nav._header.js-nav
 				+e.UL.list
-					-
-						navList = [
-						'О клубе',
-						'Программы занятий',
-						'Гарантии',
-						'Отзывы',
-						'Контакты'
-						]
-					for navLink, index in navList
-						-activeIndex = 1
-						li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink
+					li: a(href='#benefits') О клубе
+					li: a(href='#programs') Программы занятий
+					li: a(href='#whyUs') Гарантии
+					li: a(href='#testimonials') Отзывы
+					li: a(href='#contact') Контакты
 				+e.BUTTON.call-btn.btn._green._sm(type='button') Обратный звонок
 
 			button.hamburger.header__hamburger.hamburger--collapse.js-hamburger(type='button')

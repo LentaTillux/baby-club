@@ -1,7 +1,7 @@
 import './noTouch';
 import objectFitImages from 'object-fit-images';
 import './popupInit';
-import { MobNav } from './mobNav';
+import Header from './Header';
 import { CTabs } from './contactBlockTabs';
 import { initSliders } from './initSliders';
 import { initContactBlock } from './initContactBlock';
@@ -22,6 +22,7 @@ export class Common {
     initSliders();
     initContactBlock();
     showMore();
+    new Header;
   }
 }
 

@@ -394,7 +394,9 @@ var _objectFitImages2 = _interopRequireDefault(_objectFitImages);
 
 __webpack_require__(7);
 
-var _mobNav = __webpack_require__(9);
+var _Header = __webpack_require__(22);
+
+var _Header2 = _interopRequireDefault(_Header);
 
 var _contactBlockTabs = __webpack_require__(10);
 
@@ -430,6 +432,7 @@ var Common = exports.Common = function () {
       (0, _initSliders.initSliders)();
       (0, _initContactBlock.initContactBlock)();
       (0, _showMore.showMore)();
+      new _Header2.default();
     }
   }]);
 
@@ -744,66 +747,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!function(){function t(p,i){return void 0===th
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):window.Popup=t,r($)}();
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.MobNav = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _helpers = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobNav = exports.MobNav = function () {
-  function MobNav() {
-    _classCallCheck(this, MobNav);
-
-    this.$btn = $('.js-hamburger');
-    this.$nav = $('.js-nav');
-    this.init();
-  }
-
-  _createClass(MobNav, [{
-    key: 'toggleNav',
-    value: function toggleNav() {
-      this.$btn.on('click', function () {
-        $(this).toggleClass(_helpers.css.active);
-        $(this).prev(this.$nav).toggleClass(_helpers.css.active);
-        _helpers.$body.toggleClass(_helpers.css.locked);
-      });
-    }
-  }, {
-    key: 'onResize',
-    value: function onResize() {
-      var _this = this;
-
-      _helpers.$window.on('resize', function () {
-        _this.$nav.removeClass(_helpers.css.active);
-        _this.$btn.removeClass(_helpers.css.active);
-        _helpers.$body.removeClass(_helpers.css.locked);
-      });
-    }
-  }, {
-    key: 'init',
-    value: function init() {
-      this.toggleNav();
-      this.onResize();
-    }
-  }]);
-
-  return MobNav;
-}();
-
-exports.default = new MobNav();
-
-/***/ }),
+/* 9 */,
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12284,6 +12228,127 @@ var Timer = exports.Timer = function Timer() {
 ;
 
 exports.default = new Timer();
+
+/***/ }),
+/* 20 */,
+/* 21 */,
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _helpers = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Header = function () {
+  function Header() {
+    _classCallCheck(this, Header);
+
+    this.$header = $('.js-header');
+    this.$btn = $('.js-hamburger');
+    this.$nav = $('.js-nav');
+    this.init();
+  }
+
+  _createClass(Header, [{
+    key: 'fixHeader',
+    value: function fixHeader() {
+      var toggleHeaderScroll = (0, _helpers.throttle)(function () {
+        toggleHeader();
+      }, 0, this);
+
+      function toggleHeader() {
+        if (_helpers.$window.scrollTop() > 0) {
+          _helpers.$header.addClass('is-fixed');
+        } else {
+          _helpers.$header.removeClass('is-fixed');
+        }
+      }
+
+      _helpers.$window.on('scroll', toggleHeaderScroll);
+    }
+  }, {
+    key: 'toggleNav',
+    value: function toggleNav() {
+      this.$btn.on('click', function () {
+        $(this).toggleClass(_helpers.css.active);
+        $(this).prev(this.$nav).toggleClass(_helpers.css.active);
+        _helpers.$body.toggleClass(_helpers.css.locked);
+      });
+    }
+  }, {
+    key: 'onResize',
+    value: function onResize() {
+      var _this = this;
+
+      _helpers.$window.on('resize', function () {
+        _this.$nav.removeClass(_helpers.css.active);
+        _this.$btn.removeClass(_helpers.css.active);
+        _helpers.$body.removeClass(_helpers.css.locked);
+      });
+    }
+  }, {
+    key: 'navEvents',
+    value: function navEvents() {
+
+      var lastId = void 0,
+          $header = $('.js-header'),
+          headerHeight = $header.outerHeight() - 120,
+          menuItems = this.$nav.find('a'),
+          scrollSpeed = 500,
+          scrollItems = menuItems.map(function () {
+        var item = $($(this).attr('href'));
+        if (item.length) {
+          return item;
+        }
+      });
+
+      menuItems.on('click', function (e) {
+        var href = $(this).attr('href'),
+            offsetTop = href === '#' ? 0 : $(href).offset().top - headerHeight + 1;
+        _helpers.$scrolledElements.stop().animate({
+          scrollTop: offsetTop
+        }, scrollSpeed);
+        e.preventDefault();
+      });
+
+      $(window).on('scroll', function () {
+        var fromTop = $(this).scrollTop() + headerHeight;
+
+        var cur = scrollItems.map(function () {
+          if ($(this).offset().top < fromTop) return this;
+        });
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : '';
+
+        if (lastId !== id) {
+          lastId = id;
+          menuItems.parent().removeClass(_helpers.css.active).end().filter('[href=\'#' + id + '\']').parent().addClass(_helpers.css.active);
+        }
+      });
+    }
+  }, {
+    key: 'init',
+    value: function init() {
+      this.fixHeader();
+      this.navEvents();
+      this.toggleNav();
+      this.onResize();
+    }
+  }]);
+
+  return Header;
+}();
+
+exports.default = Header;
 
 /***/ })
 ],[3]);

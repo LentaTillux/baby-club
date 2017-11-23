@@ -2,7 +2,7 @@ if contact ? contact : contact = []
 if contact.title ? contact.title : contact.title = 'ПРИХОДИТЕ В ГОСТИ, ЧТОБЫ УВИДЕТЬ ВСЁ СВОИМИ ГЛАЗАМИ'
 
 //begin contact
-+b.SECTION.contact(class= contact.classMod ? contact.classMod : '')
++b.SECTION.contact(id='contact' class= contact.classMod ? contact.classMod : '')
 	+e.container.container
 		+e.H2.title.title= contact.title
 		+e.inner
