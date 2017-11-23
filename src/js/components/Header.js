@@ -25,10 +25,13 @@ export default class Header {
 
   toggleNav() {
     this.$btn.on('click', function () {
-      $(this).toggleClass(css.active);
-      $(this).prev(this.$nav).toggleClass(css.active);
-      $body.toggleClass(css.locked);
+      const $that = $(this);
+
+      $that.toggleClass(css.active);
+      $that.prev(this.$nav).toggleClass(css.active);
     });
+
+
   }
 
   onResize() {
@@ -40,10 +43,9 @@ export default class Header {
   }
 
   navEvents() {
-
     let lastId,
       $header = $('.js-header'),
-      headerHeight = $header.outerHeight() - 120,
+      headerHeight = $header.outerHeight() - 110,
       menuItems = this.$nav.find('a'),
       scrollSpeed = 500,
       scrollItems = menuItems.map(function() {
@@ -51,9 +53,15 @@ export default class Header {
         if (item.length) { return item; }
       });
 
-    menuItems.on('click', function(e){
+    const $menu = this.$nav;
+    const $menuBtn = this.$btn;
+
+    menuItems.on('click', function(e) {
       const href = $(this).attr('href'),
         offsetTop = href === '#' ? 0 : $(href).offset().top - headerHeight + 1;
+
+      $menuBtn.removeClass(css.active);
+      $menu.removeClass(css.active);
       $scrolledElements.stop().animate({
         scrollTop: offsetTop
       }, scrollSpeed);

@@ -7,51 +7,79 @@
 	z-index: 1001
 	padding: 44px 0 49px
 	background: #fff
-	transition: padding .5s ease, box-shadow .5s ease
+	transition: padding .4s ease, box-shadow .4s ease
 	+md
 		padding: 35px 0
 	+sm
 		padding: 30px 0 20px
 	+xs
-		padding: 20px 0
+		padding: 15px 0
 	&.is-fixed
 		padding: 10px 0
 		box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.2)
+		+sm
+			padding: 0
+		+xs
+			padding: 15px 0
 		.header__logo
-			width: 20%
-		.header__logo img
-			width: 200px
+			transform: translate(-80px, 0) scale(0.65)
+			+md
+				transform: translate(-30px, 0) scale(0.65)
+			+sm
+				transform: translate(-7px, 17px)
+			+xs
+				transform: none
 		.logo__descr
-			font-size: 14px
+			+sm
+				opacity: 0
 		.header__contacts
-			transform: translateY(30px)
+			transform: translateY(31px)
 		.header__contacts-block
 			transform: translateY(-200%)
+		.header__contacts-btn
+			+sm
+				transform: translateY(-200%)
 		.header__contacts-tel
-			transform: translate(30px, 0)
-			font-size: 16px
+			transform: translate(45px, 0) scale(.65)
+			+md
+				opacity: 0
 		.nav_header
 			width: 570px
-			transform: translate(-160px, -30px)
+			transform: translate(-160px, -28px)
+			+md
+				transform: translate(-50px, -20px)
+			+sm
+				transform: translate(-15px, -30px)
+			+xs
+				transform: none
+				width: auto
 		.nav__list a
 			font-size: 12px
+			+xs
+				font-size: 17px
 	&__container
 		display: flex
 		justify-content: space-between
 		align-items: center
 	&__logo
 		width: percentage(358 /1110)
-		transition: width .3s ease
+		transition: transform .4s ease
+		+gpu
+		+md
+			width: 25%
 		+sm
-			width: 30%
+			width: 24%
 		+xs
 			width: 220px
 			position: relative
 			z-index: 100
 	&__info
 		width: 66.2%
+		+md
+			width: 74%
 		+sm
-			width: 70%
+			width: 76%
+			padding-left: 15px
 		+xs
 			width: auto
 	&__contacts
@@ -59,13 +87,12 @@
 		justify-content: space-between
 		align-items: center
 		padding-bottom: 15px
-		transition: transform .3s ease
-		+sm
-			padding-left: 15px
+		transition: transform .4s ease
 		+xs
 			display: none
 		&-block
-			transition: transform .3s ease
+			transition: transform .4s ease-in-out
+			+gpu
 			a
 				+f('mus-300', 15, 15)
 				border-bottom: 1px solid rgba($purple-dark, .65)
@@ -90,10 +117,9 @@
 		&-tel
 			margin-top: -12px
 			font-size: 26px
-			transition: font-size .3s ease, transform .3s ease
+			transition: .4s ease
 			+md
 				margin-top: 0
-				font-size: 18px
 			+sm
 				display: none
 			span
@@ -102,6 +128,8 @@
 			margin-top: -16px
 			+md
 				margin-top: 0
+			+sm
+			  transition: transform .4s ease-in-out
 			+xs
 				display: none
 	&__hamburger
@@ -115,19 +143,18 @@
 	img
 		display: inline-block
 		width: 100%
-		transition: width .3s ease
+		transition: width .4s ease
 		
 	&__link
 		display: block
 	&__descr
 		font-size: 20px
 		line-height: 1
-		transition: font-size .3s ease
-		
 		+md
-			padding-left: 0
-			text-align: center
-			font-size: 16px
+			font-size: 17px
+		+sm
+			font-size: 15px
+			transition: opacity .3s ease
 		+xs
 			display: none
 	
@@ -149,6 +176,7 @@
 		opacity: 0
 		visibility: hidden
 		padding: 0
+		pointer-events: none
 		transform: translate3d(0, 100px, 0)
 		transition: transform .4s ease, opacity .4s ease, visibility 0s .4s
 		background: #1d71b8
@@ -172,6 +200,7 @@
 			justify-content: center
 			overflow: auto
 			margin-bottom: 20px
+			pointer-events: auto
 		li
 			+xs
 				margin: 8px 0
@@ -191,7 +220,7 @@
 			border-radius: 15px
 			transition: background .1s ease
 			+sm
-				font-size: 13px
+				font-size: 12px
 			+xs
 				display: block
 				padding: 10px
@@ -204,8 +233,9 @@
 		margin: 0 10px
 		+xs
 			display: block
+			pointer-events: auto
 	&_header
-		transition: transform .5s ease
+		transition: transform .4s ease
 	&_footer
 		+sm
 			display: none!important
