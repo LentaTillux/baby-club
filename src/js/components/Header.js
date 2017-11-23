@@ -30,8 +30,6 @@ export default class Header {
       $that.toggleClass(css.active);
       $that.prev(this.$nav).toggleClass(css.active);
     });
-
-
   }
 
   onResize() {
@@ -45,13 +43,18 @@ export default class Header {
   navEvents() {
     let lastId,
       $header = $('.js-header'),
-      headerHeight = $header.outerHeight() - 110,
       menuItems = this.$nav.find('a'),
       scrollSpeed = 500,
       scrollItems = menuItems.map(function() {
         let item = $($(this).attr('href'));
         if (item.length) { return item; }
       });
+
+    if (Resp.isMobile) {
+      var headerHeight = $header.outerHeight() - 15;
+    } else {
+      var headerHeight = $header.outerHeight() - 110;
+    }
 
     const $menu = this.$nav;
     const $menuBtn = this.$btn;

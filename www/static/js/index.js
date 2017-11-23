@@ -816,7 +816,6 @@ var Header = function () {
     value: function navEvents() {
       var lastId = void 0,
           $header = $('.js-header'),
-          headerHeight = $header.outerHeight() - 110,
           menuItems = this.$nav.find('a'),
           scrollSpeed = 500,
           scrollItems = menuItems.map(function () {
@@ -825,6 +824,12 @@ var Header = function () {
           return item;
         }
       });
+
+      if (_helpers.Resp.isMobile) {
+        var headerHeight = $header.outerHeight() - 15;
+      } else {
+        var headerHeight = $header.outerHeight() - 110;
+      }
 
       var $menu = this.$nav;
       var $menuBtn = this.$btn;
