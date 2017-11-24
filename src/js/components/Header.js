@@ -50,12 +50,7 @@ export default class Header {
         if (item.length) { return item; }
       });
 
-    if (Resp.isMobile) {
-      var headerHeight = $header.outerHeight() - 15;
-    } else {
-      var headerHeight = $header.outerHeight() - 110;
-    }
-
+    const headerHeight = Resp.isMobile ? $header.outerHeight() - 15 : $header.outerHeight() - 110;
     const $menu = this.$nav;
     const $menuBtn = this.$btn;
 

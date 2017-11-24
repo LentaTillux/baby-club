@@ -825,12 +825,7 @@ var Header = function () {
         }
       });
 
-      if (_helpers.Resp.isMobile) {
-        var headerHeight = $header.outerHeight() - 15;
-      } else {
-        var headerHeight = $header.outerHeight() - 110;
-      }
-
+      var headerHeight = _helpers.Resp.isMobile ? $header.outerHeight() - 15 : $header.outerHeight() - 110;
       var $menu = this.$nav;
       var $menuBtn = this.$btn;
 
@@ -12197,23 +12192,15 @@ function showMore() {
   $moreBtn.on('click', function (e) {
     var $thatBtn = $(this);
     var $btnText = $thatBtn.find('span');
-    var $tems = $thatBtn.prev().children();
+    var $items = $thatBtn.prev().children();
 
     e.preventDefault();
 
-    $tems.each(function () {
-      var _this = $(this);
-      if (_this.hasClass('is-visible')) {
-        setTimeout(function () {
-          _this.slideUp(1000).removeClass('is-visible');
-        }, 50);
-      }
-      if (_this.is(':hidden')) {
-        setTimeout(function () {
-          _this.slideDown(1000).css('display', 'inline-block').removeClass('is-hidden').addClass('is-visible');
-        }, 50);
-      }
-    });
+    if ($items.hasClass('is-visible')) {
+      $items.filter('.is-visible').slideUp().removeClass('is-visible').addClass('is-hidden');
+    } else {
+      $items.filter('.is-hidden').slideDown().css('display', 'inline-block').removeClass('is-hidden').addClass('is-visible');
+    }
 
     $btnText.text($btnText.text() === $btnText.data('default-text') ? $btnText.data('change-text') : $btnText.data('default-text'));
   });
