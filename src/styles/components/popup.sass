@@ -116,26 +116,45 @@ body.popup-opened
 	transform: translate3d(0, 0, 0)
 	
 .change-city
+	$parent: &
+	&_section
+		padding: 40px 0
 	&__form-input
 		box-shadow: 0 0 7px rgba(0, 0, 0, 0.45)
 		+xs
 			height: 40px
 			font-size: 15px
+		#{$parent}_section &
+			max-width: 400px
+			display: block
+			margin: 0 auto
+			height: 45px
 	&__top
 		display: flex
 		align-items: center
 		margin-bottom: 20px
 		+xs
 			flex-direction: column
+		#{$parent}_section &
+			display: block
 	&__title
 		flex: 0 0 140px
 		margin-right: 20px
 		+f('mus-700', 25)
 		color: #000
 		text-align: left
+		text-transform: uppercase
 		+xs
 			flex: 1 0 auto
 			margin: 0 0 20px 0
+		#{$parent}_section &
+			margin: 0 0 35px
+			text-align: center
+			+f('mus-900', 34, 50)
+			color: $purple-dark
+			+sm
+				margin: 0 0 15px
+				font-size: 28px
 	&__popular
 		display: flex
 		padding-left: 160px
@@ -144,6 +163,12 @@ body.popup-opened
 			padding-left: 0
 		+xs
 			flex-direction: column
+		#{$parent}_section &
+			justify-content: center
+			padding-left: 0
+			font-size: 17px
+			a
+				font-size: 17px
 		&-title
 			color: #000
 			+xs
@@ -153,8 +178,10 @@ body.popup-opened
 			color: #25a84a
 			border-bottom-color: #25a84a
 			+f('mus-700', 15, 20)
+			+trs
 			.no-touch &:hover
 				border-bottom-color: transparent
+				color: darken(#25a84a, 15)
 			&:not(:first-child)
 				+xs
 					margin: 10px 0 0
@@ -167,6 +194,8 @@ body.popup-opened
 			font-size: 0
 			+xs
 				margin-top: 20px
+			#{$parent}_section &
+				text-align: center
 			li
 				display: inline-block
 				vertical-align: middle
@@ -208,6 +237,14 @@ body.popup-opened
 						color: #25a84a
 		&-results
 			padding: 35px 0 0
+			#{$parent}_section &
+				li
+					text-align: center
+				a
+					font-size: 22px
+					line-height: 22px
+				+sm
+					padding: 20px 0 0
 			ul
 				column-count: 4
 				column-gap: 10px
@@ -217,6 +254,8 @@ body.popup-opened
 					column-gap: 0
 				li
 					padding: 5px 10px
+					&.is-active a
+						text-decoration: underline
 					a
 						font-size: 25px
 						line-height: 25px

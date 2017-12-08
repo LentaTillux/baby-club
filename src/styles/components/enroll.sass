@@ -1,8 +1,11 @@
 .enroll
+	$parent: &
 	position: relative
 	padding: 68px 0
 	+sm
 		padding: 25px 0 10px
+	&_ask
+		padding: 50px 0
 	&::after
 		position: absolute
 		top: 0
@@ -20,6 +23,14 @@
 		color: $black
 		+sm
 			margin-bottom: 20px
+		#{$parent}_ask &
+			margin-bottom: 5px
+	&__descr
+		+f('mus-700')
+		font-size: 20px
+		color: #000
+		text-align: center
+		text-transform: uppercase
 	&__form
 		display: flex
 		justify-content: space-between
@@ -30,6 +41,10 @@
 			flex-direction: column
 			max-width: 350px
 			margin: 0 auto
+		#{$parent}_ask &
+			padding: 35px 0 0
+			+xs
+				padding: 20px 0 0
 		&-field
 			flex: 0 1 350px
 			+md
@@ -44,8 +59,8 @@
 		&-input
 			height: 60px
 		&-submit
+			width: 100%
 			padding: 0 28px
 			+xs
 				padding: 0
-				width: 100%
 				font-size: 18px

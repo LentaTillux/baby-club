@@ -1,7 +1,12 @@
 .contact
-	padding: 80px 0 90px
+	$parent: &
+	padding: 105px 0 90px
 	+sm
 		padding: 50px 0 40px
+	&_section
+		padding: 30px 0 0
+		+sm
+			padding: 20px 0 0
 	&__title
 		text-align: left
 		+f('mus-700')
@@ -13,6 +18,8 @@
 		+sm
 			display: flex
 			flex-direction: column
+		#{$parent}_section &
+			margin: 0
 	&__nav
 		display: inline-block
 		vertical-align: middle
@@ -25,10 +32,21 @@
 			padding-right: 0
 			order: 1
 			margin-top: 25px
+		#{$parent}_section &
+			width: 420px
+			padding-right: 50px
+			vertical-align: top
+			+sm
+				width: 100%
+				padding-right: 0
 	&__city
 		margin-bottom: 15px
 		+sm
 			text-align: center
+		&-name
+			+f('mus-700', 25)
+			text-transform: uppercase
+			color: #000
 		&-current
 			display: inline-block
 			vertical-align: middle
@@ -136,6 +154,9 @@
 			min-height: 220px
 			max-width: 400px
 			margin: 20px auto 0
+		#{$parent}_section &
+			min-height: 0
+			margin-top: 0
 		&-tab
 			&:not(:first-child)
 				display: none
@@ -165,6 +186,11 @@
 					margin-top: 5px
 				&:not(:first-of-type)
 					margin-top: 15px
+				#{$parent}_section &
+					a
+						display: block
+						&:not(:first-child)
+							margin-top: 10px
 		&-actions
 			margin-top: 10px
 			font-size: 0
@@ -177,6 +203,9 @@
 					border-bottom-color: #28b463
 				&:not(:first-child)
 					margin-left: 15px
+		&-btn
+			padding: 0 15px
+			text-align: center
 	&__socials
 		margin-top: 30px
 		+md
@@ -184,13 +213,19 @@
 		+sm
 			justify-content: center
 	&__map
-		position: relative
 		display: inline-block
 		vertical-align: middle
 		width: calc(100% - 350px)
 		+ratio(760, 651)
 		+sm
 			width: 100%
+		&::before
+			+sm
+				padding-top: 65%
+		#{$parent}_section &
+			width: calc(100% - 420px)
+			+sm
+				width: 100%
 		&-body
 			+coverdiv
 			overflow: hidden
